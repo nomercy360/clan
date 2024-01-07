@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import { Icon } from 'astro-icon/components';
 ---
 
 <Layout title='Welcome to Astro.'>
@@ -37,228 +37,153 @@ import Card from '../components/Card.astro';
         </div>
       </div>
     </section>
-    <section class='bg-white min-h-screen py-28 px-5'>
-      <p class='text-neutral-950 text-xl font-bold leading-tight'>Our vision</p>
-      <p class='indent-10 md:text-[44px] text-[28px] leading-tight'>We help brands to earn money, <span
-        class='text-neutral-300'>making them independent and scalable in just a couple of </span>
+    <section class='bg-white sm:min-h-screen sm:pt-28 pt-10 px-5'>
+      <p class='indent-10 md:text-[44px] text-[28px] leading-tight'>We help brands make their first money, develop
+        strategy, and take the next steps in their journey, significantly increasing revenue and growth rate. <span
+          class='text-neutral-300'>We do this through our extensive business savvy, experience in fashion, and understanding of the market. </span>
       </p>
-      <div class='flex flex-col md:grid grid-cols-2 gap-4 w-full mt-8'>
-        <div class='flex md:flex-row flex-col gap-7 bg-[#F8F8F8] p-5 rounded-[20px]'>
-          <div class='flex md:flex-col flex-row flex-wrap gap-4 items-start'>
-            <div
-              class='md:text-xl text-base h-8 px-3 text-red rounded-[40px] bg-red/10 flex items-center justify-center whitespace-nowrap'>
-              years of struggle
-            </div>
-            <div
-              class='md:text-xl text-base h-8 px-3 text-red rounded-[40px] bg-red/10 flex items-center justify-center whitespace-nowrap'>
-              unprofitable ads
-            </div>
-            <div
-              class='md:text-xl text-base h-8 px-3 text-red rounded-[40px] bg-red/10 flex items-center justify-center whitespace-nowrap'>
-              low sales
-            </div>
-            <div
-              class='md:text-xl text-base h-8 px-3 text-red rounded-[40px] bg-red/10 flex items-center justify-center whitespace-nowrap'>
-              high commissions
-            </div>
-            <div
-              class='md:text-xl text-base h-8 px-3 text-red rounded-[40px] bg-red/10 flex items-center justify-center whitespace-nowrap'>
-              cash gaps
-            </div>
-          </div>
-          <p class='text-red md:text-[28px] text-xl font-medium leading-tight'>
-            Fashion is a struggle. <span class='text-[#E1B4A6]'>1% make it through and many remain unrecognised. Influencers are not effective. Even
-            big manufacturers are not making enough. We all dominated by retail and marketplaces and their
-            commissions.</span>
+      <div class='flex flex-col md:grid grid-cols-2 gap-4 w-full mt-8 h-[796px]'>
+        <div class='relative'>
+          <img src='/img_8.png' class='md:h-full' alt='img_8' />
+          <p class='absolute bottom-0 left-0 w-[220px] text-[20px] leading-[24px]'>
+            Omut Jewelry
+            <span class='text-gray'>boosted revenue tenfold in one year after five years of working in debt</span>
           </p>
         </div>
-        <div class='flex md:flex-row flex-col gap-7 bg-[#F8F8F8] p-5 rounded-[20px]'>
-          <div class='flex flex-col gap-4 items-start'>
-            <div
-              class='md:text-xl text-base h-8 px-3 text-green rounded-[40px] bg-green/10 flex items-center justify-center whitespace-nowrap'>
-              growth
+        <div class='grid grid-rows-2 gap-4'>
+          <div class='grid grid-cols-2 gap-4'>
+            <div class='relative'>
+              <img src='/img_9.png' class='h-full' alt='img_9' />
+              <p class='absolute top-[47%] left-0 w-[220px] text-[20px] leading-[24px]'>
+                Vereja
+                <span class='text-gray'>doubled its sales after rearranging its product assortment</span>
+              </p>
             </div>
-            <div
-              class='md:text-xl text-base h-8 px-3 text-green rounded-[40px] bg-green/10 flex items-center justify-center whitespace-nowrap'>
-              fast results
-            </div>
-            <div
-              class='md:text-xl text-base h-8 px-3 text-green rounded-[40px] bg-green/10 flex items-center justify-center whitespace-nowrap'>
-              no risks
-            </div>
-            <div
-              class='md:text-xl text-base h-8 px-3 text-green rounded-[40px] bg-green/10 flex items-center justify-center whitespace-nowrap'>
-              controllable
-            </div>
-            <div
-              class='md:text-xl text-base h-8 px-3 text-green rounded-[40px] bg-green/10 flex items-center justify-center whitespace-nowrap'>
-              predictable
-            </div>
-            <div
-              class='md:text-xl text-base h-8 px-3 text-green rounded-[40px] bg-green/10 flex items-center justify-center whitespace-nowrap'>
-              cheap
+            <div class='relative'>
+              <img src='/img_10.png' class='h-full' alt='img_10' />
+              <p class='absolute top-0 right-0 w-[220px] text-[20px] leading-[24px]'>
+                Mirstores
+                <span class='text-gray'>discovered the break-even point and established financial management</span>
+              </p>
             </div>
           </div>
-          <p class='text-green md:text-[28px] text-xl font-medium leading-tight'>
-            Fashion is a struggle. bypassing norms and prejudices imposed by the community, and doing things that works
-          </p>
+          <div>
+            <div class='relative'>
+              <img src='/img_11.png' class='h-full' alt='img_11' />
+              <p class='absolute bottom-0 left-0 w-[220px] text-[20px] leading-[24px]'>
+                Beaded Breakfast
+                <span class='text-gray'>tripled sales after rebranding and its first marketing campaign</span>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <section class='bg-white min-h-screen py-28 px-5'>
-      <p class='text-neutral-950 text-xl font-bold leading-tight'>First step</p>
-      <p class='indent-10 md:text-[44px] text-[28px] leading-tight'>We are building stable and predictable income. <span
-        class='text-neutral-300'>We just know how to make online sales profitable, and we are doing it in the first month.</span>
+    <section class='bg-white sm:min-h-screen sm:pt-28 pt-10 px-5'>
+      <p class='indent-10 md:text-[44px] text-[28px] leading-tight'>We work with the entire brand itself, analyzing
+        financials, business, production, market, and developing a strategy to execute. <span
+          class='text-neutral-300'>Mostly, we are starting with online sales, gradually moving towards bigger and more complex tasks. In our ideal world, you handle design and production while we take care of everything else.</span>
       </p>
-      <div class='grid grid-cols-3 gap-4 w-full mt-8 h-[400px]'>
+      <div class='grid grid-cols-4 gap-4 w-full mt-8 h-[390px]'>
         <div class='flex flex-col gap-3 bg-[#F8F8F8] p-5 rounded-[20px]'>
-          <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
-            <circle cx='12' cy='12' r='12' fill='#008AFF' />
-            <rect x='11' y='6' width='2' height='12' fill='#141414' />
-          </svg>
+          <Icon name='box' class='w-6 h-6' />
           <p class='text-neutral-950 text-xl font-medium leading-tight'>
-            Growth strategy and planning <span class='text-gray'>doubled sales after product
-            assortment rearrangement</span>
+            Advertising & branding
+          </p>
+          <p class='text-gray text-xl font-medium leading-tight'>
+            Mostly we are starting with online sales, website, and simple financial model.
           </p>
         </div>
         <div class='flex flex-col gap-3 bg-[#F8F8F8] p-5 rounded-[20px]'>
-          <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
-            <circle cx='12' cy='12' r='12' fill='#FFD203' />
-            <rect x='9' y='6' width='2' height='12' fill='#141414' />
-            <rect x='13' y='6' width='2' height='12' fill='#141414' />
-          </svg>
+          <Icon name='triangle' class='w-6 h-6' />
           <p class='text-neutral-950 text-xl font-medium leading-tight'>
-            Advertising management
-            <span class='text-gray'>doubled sales after product assortment rearrangement</span>
+            Financial management
+          </p>
+          <p class='text-gray text-xl font-medium leading-tight'>
+            In the first months, we are developing a simple financial model which allows us to manage budgets, and
+            understand the most profitable products. Then we are developing a more complex model, that optimise
+            production, sales, and allows us to plan growth years ahead.
           </p>
         </div>
         <div class='flex flex-col gap-3 bg-[#F8F8F8] p-5 rounded-[20px]'>
-          <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
-            <circle cx='12' cy='12' r='12' fill='#EE5C0A' />
-            <rect x='7' y='6' width='2' height='12' fill='#141414' />
-            <rect x='11' y='6' width='2' height='12' fill='#141414' />
-            <rect x='15' y='6' width='2' height='12' fill='#141414' />
-          </svg>
+          <Icon name='shape' class='w-6 h-6' />
           <p class='text-neutral-950 text-xl font-medium leading-tight'>
-            Revenue management,
-            <span class='text-gray'>doubled sales after product assortment rearrangement</span>
+            Marketing and engineering
+          </p>
+          <p class='text-gray text-xl font-medium leading-tight'>
+            We design and develop websites and crm platforms
+          </p>
+        </div>
+        <div class='flex flex-col gap-3 bg-[#F8F8F8] p-5 rounded-[20px]'>
+          <Icon name='dots' class='w-6 h-6' />
+          <p class='text-neutral-950 text-xl font-medium leading-tight'>
+            Assortment management
+          </p>
+          <p class='text-gray text-xl font-medium leading-tight'>
+            Understanding most valuable and sellable products, we are developing assortment. Sometimes it includes
           </p>
         </div>
       </div>
     </section>
 
-    <section class='bg-white min-h-screen py-28 px-5'>
-      <p class='text-neutral-950 text-xl font-bold leading-tight'>Second step</p>
-      <p class='indent-10 md:text-[44px] text-[28px] leading-tight'>We bring you data and speed. <span
-        class='text-neutral-300'>It allows us to see more, control growth, and save tons of your time even on regular orders handling.</span>
+    <section class='bg-white sm:min-h-screen sm:pt-28 pt-10 px-5'>
+      <p class='indent-10 md:text-[44px] text-[28px] leading-tight'>
+        We charge income commissions and work as an outsourced team, developing partnership relationships.
+        <span class='text-neutral-300'>
+          Firstly, this is the only way for most brands to afford our services. Secondly, we put our skin in the game: if our work is ineffective, you are not risking anything; if it's effective, we make money together. Simple.
+        </span>
       </p>
-      <div
-        class='mt-8 flex md:flex-row flex-col justify-between items-start gap-3 bg-[#F8F8F8] pl-5 pt-5 rounded-[20px] w-full h-[400px]'>
-        <div class='max-w-xs'>
-          <p class='text-2xl font-medium text-neutral-950 leading-tight'>Fully customisable personal dashboard</p>
-          <p class='text-gray font-medium text-xl leading-tight'>You’ll knew everything about things you sell.
-            From understanding the price</p>
-        </div>
-        <img src='/img_1.png' class='md:h-full' />
-      </div>
-    </section>
-    <section class='bg-white min-h-screen py-28 px-5'>
-      <p class='text-neutral-950 text-xl font-bold leading-tight'>Step three</p>
-      <p class='indent-10 md:text-[44px] text-[28px] leading-tight'>We help you move to the next level.<span
-        class='text-neutral-300'>
-        Working on products, branding, pricing, and overall strategy. At this this time we start to understood what to do and what not, and may scale sales by the snap of fingers.</span>
-      </p>
-      <div class='grid grid-cols-4 gap-4 mt-8'>
-        <div id='block-1' class='relative'>
-          <div class='absolute top-[48%] left-0 bg-white rounded-r-[20px] w-2/3 text-xl font-medium leading-tight'>
-            Vereja <span class='text-gray'>doubled sales after product assortment rearrangement</span>
+      <div class='grid grid-cols-2 gap-4 w-full mt-8 h-[390px]'>
+        <div class='flex flex-col bg-[#F8F8F8] p-5 rounded-[20px] justify-between'>
+          <div class='flex flex-col gap-3'>
+            <Icon name='circle' class='w-6 h-6' />
+            <p class='text-neutral-950 text-xl font-medium leading-tight max-w-md'>
+              If you want to test everything out. We’ll take over marketing and sales, quickly increasing your income in
+              first months or even weeks. That will help us to build a strategy and financial model.
+            </p>
+          </div>
+          <div>
+            <p class='text-neutral-950 text-2xl font-medium leading-tight'>
+              15% for marketing
+            </p>
+            <p class='text-gray text-xl font-medium leading-tight'>
+              no risks for start
+            </p>
           </div>
         </div>
-        <div id='block-2' class='relative'>
-          <div class='absolute bottom-2 right-0 bg-white rounded-r-[20px] w-2/3 text-xl font-medium leading-tight'>
-            Vereja <span class='text-gray'>doubled sales after product assortment rearrangement</span>
+        <div class='flex flex-col bg-[#F8F8F8] p-5 rounded-[20px] justify-between'>
+          <div class='flex flex-col gap-3'>
+            <Icon name='circle2' class='w-6 h-6' />
+            <p class='text-neutral-950 text-xl font-medium leading-tight max-w-md'>
+              When you are ready to build, we’ll take responsibility for the strategy execution, working on every aspect
+              of the brand, marketing, and production. It will gave you significant growth in 6-12 months.
+            </p>
           </div>
-        </div>
-        <div id='block-3' class='relative'>
-          <div class='absolute top-0 left-0 bg-white rounded-r-[20px] w-2/3 text-xl font-medium leading-tight'>
-            Vereja <span class='text-gray'>
-            tripled sales in three months after rebranding and first marketing campaign
-          </span>
-          </div>
-        </div>
-        <div id='block-4' class='relative'>
-          <div class='absolute bottom-[48%] right-0 bg-white rounded-r-[20px] w-2/3 text-xl font-medium leading-tight'>
-            Mirstores <span class='text-gray'>
-             found out break-even point and fixed financial management
-          </span>
+          <div>
+            <p class='text-neutral-950 text-2xl font-medium leading-tight'>
+              30% for direction and growth
+            </p>
+            <p class='text-gray text-xl font-medium leading-tight'>
+              best for long-term and significant results
+            </p>
           </div>
         </div>
       </div>
     </section>
-    <section class='bg-white min-h-screen py-28 px-5'>
-      <p class='text-neutral-950 text-xl font-bold leading-tight'>We charge commissions instead payments</p>
-      <p class='indent-10 md:text-[44px] text-[28px] leading-tight'>allowing not to pay much that grow step by step<span
-        class='text-neutral-300'>It allows you to use full potential of our team and pay less than when working with agency. Also, we both share risks.</span>
+    <section class='bg-white sm:pt-28 pt-10 px-5'>
+      <p class='indent-10 md:text-[44px] text-[28px] leading-tight'>We stand against old-fashioned ways imposed by the
+        community and simply making money. Independently, quickly, free of prejudices.<span
+          class='text-neutral-300'>
+        If you have a good product, a little bit of sales, and share our vision, we are ready to go. We work with jewelry, shoes, perfumes, accessories, clothing, and furniture.</span>
       </p>
-      <div class='grid grid-cols-3 gap-4 w-full mt-8 h-[400px]'>
-        <div class='flex flex-col justify-between bg-[#F8F8F8] p-5 rounded-[20px]'>
-          <div class='flex flex-col gap-3'>
-            <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
-              <circle cx='12' cy='12' r='12' fill='#008AFF' />
-              <rect x='11' y='6' width='2' height='12' fill='#141414' />
-            </svg>
-            <p class='text-neutral-950 text-xl font-medium leading-tight'>
-              First 1-4 months <span class='text-gray'>doubled sales after product assortment rearrangement</span>
-            </p>
-          </div>
-          <div class='flex flex-col gap-1'>
-            <p class='text-2xl text-neutral-950 leading-tight font-medium'>15% for marketing</p>
-            <p class='text-xl text-gray leading-tight font-medium'>no risks for start</p>
-          </div>
-        </div>
-        <div class='flex flex-col justify-between bg-[#F8F8F8] p-5 rounded-[20px]'>
-          <div class='flex flex-col gap-3'>
-            <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
-              <circle cx='12' cy='12' r='12' fill='#FFD203' />
-              <rect x='9' y='6' width='2' height='12' fill='#141414' />
-              <rect x='13' y='6' width='2' height='12' fill='#141414' />
-            </svg>
-            <p class='text-neutral-950 text-xl font-medium leading-tight'>
-              After 4 months,
-              <span class='text-gray'>doubled sales after product assortment rearrangement</span>
-            </p>
-          </div>
-          <div class='flex flex-col gap-1'>
-            <p class='text-2xl text-neutral-950 leading-tight font-medium'>3% for platform</p>
-            <p class='text-xl text-gray leading-tight font-medium'>additionally is included</p>
-          </div>
-        </div>
-        <div class='flex flex-col justify-between bg-[#F8F8F8] p-5 rounded-[20px]'>
-          <div class='flex flex-col gap-3'>
-            <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
-              <circle cx='12' cy='12' r='12' fill='#EE5C0A' />
-              <rect x='7' y='6' width='2' height='12' fill='#141414' />
-              <rect x='11' y='6' width='2' height='12' fill='#141414' />
-              <rect x='15' y='6' width='2' height='12' fill='#141414' />
-            </svg>
-            <p class='text-neutral-950 text-xl font-medium leading-tight'>
-              Whenever you ready,
-              <span class='text-gray'>doubled sales after product assortment rearrangement</span>
-            </p>
-          </div>
-          <div class='flex flex-col gap-1'>
-            <p class='text-2xl text-neutral-950 leading-tight font-medium'>Individually</p>
-            <p class='text-xl text-gray leading-tight font-medium'>marketing and platform are included</p>
-          </div>
-        </div>
-      </div>
     </section>
     <section class='p-5 bg-white h-screen relative'>
       <video autoplay muted loop id='another' class='w-full h-full object-cover z-0 rounded-[20px]'
              poster='/img.webp'>
         <source src='/rage_longer_compressed.mp4' type='video/mp4' />
       </video>
-      <div class='flex flex-col items-center absolute transform -translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2 z-50 w-full'>
+      <div
+        class='flex flex-col items-center absolute transform -translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2 z-50 w-full'>
         <p class='text-white md:text-[88px] text-[48px] leading-tight text-center md:max-w-4xl'>
           rage, rage against the dying of the light
         </p>
