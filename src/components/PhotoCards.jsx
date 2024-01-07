@@ -9,14 +9,6 @@ export default function PhotoCards() {
     setIsMobile(window.innerWidth < 768);
   });
 
-  createEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % cardTexts.length);
-    }, 2000);
-
-    return () => clearInterval(interval);
-  });
-
   return (
     <div class='flex flex-col gap-4 sm:hidden'>
       <img src='/img_3.webp' alt='img_3' />

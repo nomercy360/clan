@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Cards from '../components/Cards';
 import InfoCards from '../components/InfoCards';
 import PhotoCards from '../components/PhotoCards';
+import SignIn from '../components/SignIn';
 ---
 
 <Layout title='Clan Platform'>
@@ -12,14 +13,8 @@ import PhotoCards from '../components/PhotoCards';
       <source src='/RedWoman_compressed.mp4' type='video/mp4' />
     </video>
     <section id='hero' class='flex flex-col justify-between items-start'>
-      <nav class='flex flex-row justify-between w-full items-center px-5 py-4 z-50'>
-        <h1 class='text-white md:text-[44x] text-[28px] leading-[48px] font-medium'>CLAN™</h1>
-        <a
-          class='bg-white rounded-[50px] md:h-11 h-7 px-4 md:text-xl text-base flex items-center justify-center text-neutral-950'>
-          Sign In
-        </a>
-      </nav>
-      <div class='flex flex-col md:justify-end justify-between h-full p-5 z-50'>
+      <SignIn client:only='solid-js' />
+      <div class='flex flex-col md:justify-end justify-between h-full p-5 z-10'>
         <h3 class='md:text-[88px] text-[48px] leading-tight text-white'>
           growth agency for fashion brands and independent designers
         </h3>
@@ -78,7 +73,7 @@ import PhotoCards from '../components/PhotoCards';
         <source src='/rage_longer_compressed.mp4' type='video/mp4' />
       </video>
       <div
-        class='flex flex-col items-center absolute transform -translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2 z-50 w-full'>
+        class='flex flex-col items-center absolute transform -translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2 z-10 w-full'>
         <p class='text-white font-normal md:text-[88px] text-[48px] leading-tight text-center md:max-w-4xl max-w-xs'>
           Rage, rage against the dying of the light
         </p>
