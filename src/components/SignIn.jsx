@@ -5,7 +5,7 @@ export default function SignIn() {
   const [contactName, setContactName] = createSignal('');
   const [brandInfo, setBrandInfo] = createSignal('');
 
-  const [isOpened, setIsOpened] = createSignal(true);
+  const [isOpened, setIsOpened] = createSignal(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
