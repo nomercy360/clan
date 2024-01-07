@@ -1,9 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Icon } from 'astro-icon/components';
+import Cards from '../components/Cards';
+import InfoCards from '../components/InfoCards';
+import PhotoCards from '../components/PhotoCards';
 ---
 
-<Layout title='Welcome to Astro.'>
+<Layout title='Clan Platform'>
   <main>
     <video autoplay muted loop id='myVideo' class='absolute top-0 left-0 w-full h-screen object-cover z-0'
            poster='/img.webp'>
@@ -37,140 +39,33 @@ import { Icon } from 'astro-icon/components';
         </div>
       </div>
     </section>
-    <section class='bg-white sm:min-h-screen sm:pt-28 pt-10 px-5'>
-      <p class='indent-10 md:text-[44px] text-[28px] leading-tight'>We help brands make their first money, develop
+    <section class='bg-white sm:min-h-screen sm:pt-28 pt-20 px-5'>
+      <p class='indent-10 md:text-[44px] text-[28px] leading-tight mb-10'>We help brands make their first money, develop
         strategy, and take the next steps in their journey, significantly increasing revenue and growth rate. <span
           class='text-neutral-300'>We do this through our extensive business savvy, experience in fashion, and understanding of the market. </span>
       </p>
-      <div class='flex flex-col md:grid grid-cols-2 gap-4 w-full mt-8 h-[796px]'>
-        <div class='relative'>
-          <img src='/img_8.png' class='md:h-full' alt='img_8' />
-          <p class='absolute bottom-0 left-0 w-[220px] text-[20px] leading-[24px]'>
-            Omut Jewelry
-            <span class='text-gray'>boosted revenue tenfold in one year after five years of working in debt</span>
-          </p>
-        </div>
-        <div class='grid grid-rows-2 gap-4'>
-          <div class='grid grid-cols-2 gap-4'>
-            <div class='relative'>
-              <img src='/img_9.png' class='h-full' alt='img_9' />
-              <p class='absolute top-[47%] left-0 w-[220px] text-[20px] leading-[24px]'>
-                Vereja
-                <span class='text-gray'>doubled its sales after rearranging its product assortment</span>
-              </p>
-            </div>
-            <div class='relative'>
-              <img src='/img_10.png' class='h-full' alt='img_10' />
-              <p class='absolute top-0 right-0 w-[220px] text-[20px] leading-[24px]'>
-                Mirstores
-                <span class='text-gray'>discovered the break-even point and established financial management</span>
-              </p>
-            </div>
-          </div>
-          <div>
-            <div class='relative'>
-              <img src='/img_11.png' class='h-full' alt='img_11' />
-              <p class='absolute bottom-0 left-0 w-[220px] text-[20px] leading-[24px]'>
-                Beaded Breakfast
-                <span class='text-gray'>tripled sales after rebranding and its first marketing campaign</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <img src='/img_1.webp' alt='img_1' class='w-fit hidden xl:block' />
+      <img src='/img_2.webp' alt='img_1' class='w-fit hidden sm:block xl:hidden' />
+      <PhotoCards client:only='solid-js' />
     </section>
-    <section class='bg-white sm:min-h-screen sm:pt-28 pt-10 px-5'>
+    <section class='bg-white sm:min-h-screen sm:pt-28 pt-20 px-5'>
       <p class='indent-10 md:text-[44px] text-[28px] leading-tight'>We work with the entire brand itself, analyzing
         financials, business, production, market, and developing a strategy to execute. <span
           class='text-neutral-300'>Mostly, we are starting with online sales, gradually moving towards bigger and more complex tasks. In our ideal world, you handle design and production while we take care of everything else.</span>
       </p>
-      <div class='grid grid-cols-4 gap-4 w-full mt-8 h-[390px]'>
-        <div class='flex flex-col gap-3 bg-[#F8F8F8] p-5 rounded-[20px]'>
-          <Icon name='box' class='w-6 h-6' />
-          <p class='text-neutral-950 text-xl font-medium leading-tight'>
-            Advertising & branding
-          </p>
-          <p class='text-gray text-xl font-medium leading-tight'>
-            Mostly we are starting with online sales, website, and simple financial model.
-          </p>
-        </div>
-        <div class='flex flex-col gap-3 bg-[#F8F8F8] p-5 rounded-[20px]'>
-          <Icon name='triangle' class='w-6 h-6' />
-          <p class='text-neutral-950 text-xl font-medium leading-tight'>
-            Financial management
-          </p>
-          <p class='text-gray text-xl font-medium leading-tight'>
-            In the first months, we are developing a simple financial model which allows us to manage budgets, and
-            understand the most profitable products. Then we are developing a more complex model, that optimise
-            production, sales, and allows us to plan growth years ahead.
-          </p>
-        </div>
-        <div class='flex flex-col gap-3 bg-[#F8F8F8] p-5 rounded-[20px]'>
-          <Icon name='shape' class='w-6 h-6' />
-          <p class='text-neutral-950 text-xl font-medium leading-tight'>
-            Marketing and engineering
-          </p>
-          <p class='text-gray text-xl font-medium leading-tight'>
-            We design and develop websites and crm platforms
-          </p>
-        </div>
-        <div class='flex flex-col gap-3 bg-[#F8F8F8] p-5 rounded-[20px]'>
-          <Icon name='dots' class='w-6 h-6' />
-          <p class='text-neutral-950 text-xl font-medium leading-tight'>
-            Assortment management
-          </p>
-          <p class='text-gray text-xl font-medium leading-tight'>
-            Understanding most valuable and sellable products, we are developing assortment. Sometimes it includes
-          </p>
-        </div>
-      </div>
+      <Cards client:only='solid-js' />
     </section>
 
-    <section class='bg-white sm:min-h-screen sm:pt-28 pt-10 px-5'>
+    <section class='bg-white sm:min-h-screen sm:pt-28 pt-20 px-5'>
       <p class='indent-10 md:text-[44px] text-[28px] leading-tight'>
         We charge income commissions and work as an outsourced team, developing partnership relationships.
         <span class='text-neutral-300'>
           Firstly, this is the only way for most brands to afford our services. Secondly, we put our skin in the game: if our work is ineffective, you are not risking anything; if it's effective, we make money together. Simple.
         </span>
       </p>
-      <div class='grid grid-cols-2 gap-4 w-full mt-8 h-[390px]'>
-        <div class='flex flex-col bg-[#F8F8F8] p-5 rounded-[20px] justify-between'>
-          <div class='flex flex-col gap-3'>
-            <Icon name='circle' class='w-6 h-6' />
-            <p class='text-neutral-950 text-xl font-medium leading-tight max-w-md'>
-              If you want to test everything out. We’ll take over marketing and sales, quickly increasing your income in
-              first months or even weeks. That will help us to build a strategy and financial model.
-            </p>
-          </div>
-          <div>
-            <p class='text-neutral-950 text-2xl font-medium leading-tight'>
-              15% for marketing
-            </p>
-            <p class='text-gray text-xl font-medium leading-tight'>
-              no risks for start
-            </p>
-          </div>
-        </div>
-        <div class='flex flex-col bg-[#F8F8F8] p-5 rounded-[20px] justify-between'>
-          <div class='flex flex-col gap-3'>
-            <Icon name='circle2' class='w-6 h-6' />
-            <p class='text-neutral-950 text-xl font-medium leading-tight max-w-md'>
-              When you are ready to build, we’ll take responsibility for the strategy execution, working on every aspect
-              of the brand, marketing, and production. It will gave you significant growth in 6-12 months.
-            </p>
-          </div>
-          <div>
-            <p class='text-neutral-950 text-2xl font-medium leading-tight'>
-              30% for direction and growth
-            </p>
-            <p class='text-gray text-xl font-medium leading-tight'>
-              best for long-term and significant results
-            </p>
-          </div>
-        </div>
-      </div>
+      <InfoCards client:only='solid-js' />
     </section>
-    <section class='bg-white sm:pt-28 pt-10 px-5'>
+    <section class='bg-white sm:pt-28 pt-20 px-5'>
       <p class='indent-10 md:text-[44px] text-[28px] leading-tight'>We stand against old-fashioned ways imposed by the
         community and simply making money. Independently, quickly, free of prejudices.<span
           class='text-neutral-300'>
@@ -184,8 +79,8 @@ import { Icon } from 'astro-icon/components';
       </video>
       <div
         class='flex flex-col items-center absolute transform -translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2 z-50 w-full'>
-        <p class='text-white md:text-[88px] text-[48px] leading-tight text-center md:max-w-4xl'>
-          rage, rage against the dying of the light
+        <p class='text-white font-normal md:text-[88px] text-[48px] leading-tight text-center md:max-w-4xl max-w-xs'>
+          Rage, rage against the dying of the light
         </p>
         <div class='flex flex-row items-center justify-center gap-4 text-white mt-24'>
           <a>x.com</a>
@@ -200,37 +95,5 @@ import { Icon } from 'astro-icon/components';
 <style>
     #hero {
         height: 100vh;
-    }
-
-    #block-1 {
-        background-image: url('/img_2.png');
-        background-size: cover;
-        background-position: center;
-        height: 400px;
-        border-radius: 20px;
-    }
-
-    #block-2 {
-        background-image: url('/img_4.png');
-        background-size: cover;
-        background-position: center;
-        height: 400px;
-        border-radius: 20px;
-    }
-
-    #block-3 {
-        background-image: url('/img_5.png');
-        background-size: cover;
-        background-position: center;
-        height: 400px;
-        border-radius: 20px;
-    }
-
-    #block-4 {
-        background-image: url('/img_6.png');
-        background-size: cover;
-        background-position: center;
-        height: 400px;
-        border-radius: 20px;
     }
 </style>
