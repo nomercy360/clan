@@ -40,7 +40,7 @@ export default function SignIn() {
   return (
     <div class="z-50 w-full">
       <Show when={!isOpened()}>
-        <nav class="fixed inset-0 flex h-10 w-full flex-row justify-between px-5 pt-6">
+        <nav class="fixed inset-0 flex h-10 w-full flex-row justify-between px-3 pt-6 sm:px-5">
           <p class="text-[28px] font-medium leading-[48px] text-white mix-blend-difference md:text-[44x]">
             CLAN™
           </p>
@@ -54,7 +54,7 @@ export default function SignIn() {
       </Show>
       <Show when={isOpened()}>
         <div class="fixed inset-0 z-[999] flex flex-col items-start justify-start bg-black">
-          <nav class="flex w-full flex-row justify-between px-5 pt-6">
+          <nav class="flex w-full flex-row justify-between px-3 pt-6 sm:px-5">
             <h1 class="text-[28px] font-medium leading-[48px] text-white md:text-[44x]">
               CLAN™
             </h1>
@@ -65,7 +65,7 @@ export default function SignIn() {
               Close
             </button>
           </nav>
-          <div class="mt-5 flex h-full w-full flex-col justify-between p-5 sm:w-1/2">
+          <div class="mt-5 flex h-full w-full flex-col justify-between p-3 sm:w-1/2 sm:p-5">
             <div>
               <p class="mb-10 max-w-md text-3xl leading-tight text-white sm:text-4xl">
                 submit an application. We’ll contact you within 2-3 business
