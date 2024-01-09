@@ -11,9 +11,13 @@ export default function SignIn() {
     e.preventDefault();
     try {
       const response = await fetch('/leads', {
-        email: email(),
-        contactName: contactName(),
-        brandInfo: brandInfo(),
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: email(),
+          contactName: contactName(),
+          brandInfo: brandInfo(),
+        }),
       });
       // Handle success
       console.log(response.data);
