@@ -10,7 +10,7 @@ export default function SignIn() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://api.clan.team/leads', {
+      const response = await fetch('/leads', {
         email: email(),
         contactName: contactName(),
         brandInfo: brandInfo(),
@@ -34,12 +34,14 @@ export default function SignIn() {
   };
 
   return (
-    <div class='w-full z-50'>
+    <div class="z-50 w-full">
       <Show when={!isOpened()}>
-        <nav class='flex flex-row justify-between w-full pt-6 px-5 fixed inset-0 h-10'>
-          <p class='mix-blend-difference text-white md:text-[44x] text-[28px] leading-[48px] font-medium'>CLAN™</p>
+        <nav class="fixed inset-0 flex h-10 w-full flex-row justify-between px-5 pt-6">
+          <p class="text-[28px] font-medium leading-[48px] text-white mix-blend-difference md:text-[44x]">
+            CLAN™
+          </p>
           <button
-            class='bg-white h-[44px] text-black px-4 rounded-[50px] font-medium'
+            class="h-[44px] rounded-[50px] bg-white px-4 font-medium text-black"
             onClick={() => onOpenModal()}
           >
             Sign In
@@ -47,52 +49,55 @@ export default function SignIn() {
         </nav>
       </Show>
       <Show when={isOpened()}>
-        <div class='fixed inset-0 z-[999] bg-black flex flex-col justify-start items-start'>
-          <nav class='flex flex-row justify-between w-full pt-6 px-5'>
-            <h1 class='text-white md:text-[44x] text-[28px] leading-[48px] font-medium'>CLAN™</h1>
+        <div class="fixed inset-0 z-[999] flex flex-col items-start justify-start bg-black">
+          <nav class="flex w-full flex-row justify-between px-5 pt-6">
+            <h1 class="text-[28px] font-medium leading-[48px] text-white md:text-[44x]">
+              CLAN™
+            </h1>
             <button
-              class='bg-white h-[44px] backdrop-blur-md text-black font-medium px-4 rounded-[50px]'
+              class="h-[44px] rounded-[50px] bg-white px-4 font-medium text-black backdrop-blur-md"
               onClick={() => onCloseModal()}
             >
               Close
             </button>
           </nav>
-          <div class='p-5 mt-5 flex flex-col h-full justify-between w-full sm:w-1/2'>
+          <div class="mt-5 flex h-full w-full flex-col justify-between p-5 sm:w-1/2">
             <div>
-              <p class='text-3xl sm:text-4xl text-white leading-tight max-w-md mb-10'>
-                submit an application. We’ll contact you within 2-3 business days
+              <p class="mb-10 max-w-md text-3xl leading-tight text-white sm:text-4xl">
+                submit an application. We’ll contact you within 2-3 business
+                days
               </p>
               <form onSubmit={handleSubmit}>
-                <div class='mb-4'>
+                <div class="mb-4">
                   <input
-                    type='text'
-                    class='text-base sm:text-2xl rounded-[52px] bg-[#111] appearance-none w-full h-[60px] sm:h-[72px] px-7 text-white leading-tight focus:outline-none focus:shadow-outline placeholder:text-[#595959]'
-                    id='email'
-                    placeholder='E-mail, Telegram, or WhatsApp number'
+                    type="text"
+                    class="focus:shadow-outline h-[60px] w-full appearance-none rounded-[52px] bg-[#111] px-7 text-base leading-tight text-white placeholder:text-[#595959] focus:outline-none sm:h-[72px] sm:text-2xl"
+                    id="email"
+                    placeholder="E-mail, Telegram, or WhatsApp number"
                     onInput={(e) => setEmail(e.target.value)}
                   />
                 </div>
-                <div class='mb-4'>
+                <div class="mb-4">
                   <input
-                    type='text'
-                    class='text-base sm:text-2xl rounded-[52px] bg-[#111] appearance-none w-full h-[60px] sm:h-[72px] px-7 text-white leading-tight focus:outline-none focus:shadow-outline placeholder:text-[#595959]'
-                    id='contactName'
-                    placeholder='Contact name'
+                    type="text"
+                    class="focus:shadow-outline h-[60px] w-full appearance-none rounded-[52px] bg-[#111] px-7 text-base leading-tight text-white placeholder:text-[#595959] focus:outline-none sm:h-[72px] sm:text-2xl"
+                    id="contactName"
+                    placeholder="Contact name"
                     onInput={(e) => setContactName(e.target.value)}
                   />
                 </div>
-                <div class='mb-4'>
+                <div class="mb-4">
                   <input
-                    type='text'
-                    class='text-base sm:text-2xl rounded-[52px] bg-[#111] appearance-none w-full h-[60px] sm:h-[72px] px-7 text-white mb-3 leading-tight focus:outline-none focus:shadow-outline placeholder:text-[#595959]'
-                    id='brandInfo'
-                    placeholder='Brand’s instagram or website'
+                    type="text"
+                    class="focus:shadow-outline mb-3 h-[60px] w-full appearance-none rounded-[52px] bg-[#111] px-7 text-base leading-tight text-white placeholder:text-[#595959] focus:outline-none sm:h-[72px] sm:text-2xl"
+                    id="brandInfo"
+                    placeholder="Brand’s instagram or website"
                     onInput={(e) => setBrandInfo(e.target.value)}
                   />
                 </div>
                 <button
-                  class='text-base sm:text-2xl w-full bg-white text-black font-medium h-[60px] sm:h-[64px] px-4 rounded-[52px] focus:outline-none focus:shadow-outline'
-                  type='submit'
+                  class="focus:shadow-outline h-[60px] w-full rounded-[52px] bg-white px-4 text-base font-medium text-black focus:outline-none sm:h-[64px] sm:text-2xl"
+                  type="submit"
                 >
                   Send application
                 </button>
@@ -103,5 +108,4 @@ export default function SignIn() {
       </Show>
     </div>
   );
-};
-
+}

@@ -6,75 +6,126 @@ import PhotoCards from '../components/PhotoCards';
 import SignIn from '../components/SignIn';
 ---
 
-<Layout title='Clan Platform'>
+<Layout title="Clan Platform">
   <main>
-    <video autoplay muted loop playsinline id='myVideo' class='absolute top-0 left-0 w-full h-screen object-cover z-0'
-           poster='/img.webp'>
-      <source src='/RedWoman_compressed.mp4' type='video/mp4' />
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      id="myVideo"
+      class="absolute left-0 top-0 z-0 h-screen w-full object-cover"
+      poster="/img.webp"
+    >
+      <source src="/RedWoman_compressed.mp4" type="video/mp4" />
     </video>
-    <section id='hero' class='flex flex-col justify-between items-start'>
-      <SignIn client:only='solid-js' />
-      <div class='flex flex-col md:justify-end justify-between h-full p-5 z-10'>
-        <h1 class='sm:mt-0 mt-14 md:text-[88px] text-[48px] leading-none sm:leading-tight text-white'>
+    <section id="hero" class="flex flex-col items-start justify-between">
+      <SignIn client:only="solid-js" />
+      <div class="z-10 flex h-full flex-col justify-between p-5 md:justify-end">
+        <h1
+          class="mt-14 text-[48px] leading-none text-white sm:mt-0 sm:leading-tight md:text-[88px]"
+        >
           growth agency for fashion brands and independent designers
         </h1>
-        <div class='flex flex-col md:grid grid-cols-3 gap-4 mt-8'>
-          <p class='text-xl text-white leading-tight'>
-            10X average revenue growth <span class='text-dusty-rose'>of connected brands in the first year of work</span>
+        <div class="mt-8 flex grid-cols-3 flex-col gap-4 md:grid">
+          <p class="text-xl leading-tight text-white">
+            10X average revenue growth <span class="text-dusty-rose"
+              >of connected brands in the first year of work</span
+            >
           </p>
-          <p class='text-xl text-white leading-tight'>
-            5+ years of saved time <span class='text-dusty-rose'>on growth and experiments due to our extensive background</span>
+          <p class="text-xl leading-tight text-white">
+            5+ years of saved time <span class="text-dusty-rose"
+              >on growth and experiments due to our extensive background</span
+            >
           </p>
-          <p class='text-xl text-white leading-tight'>
-            30% less operational costs<span class='text-dusty-rose'>, due automations and better management</span>
+          <p class="text-xl leading-tight text-white">
+            30% less operational costs<span class="text-dusty-rose"
+              >, due automations and better management</span
+            >
           </p>
         </div>
       </div>
     </section>
-    <section class='bg-white sm:min-h-screen sm:pt-28 pt-20 px-5'>
-      <p class='indent-10 md:text-[44px] text-[28px] leading-tight mb-10 font-medium'>We help brands make their first money, develop
-        strategy, and take the next steps in their journey, significantly increasing revenue and growth rate. <span
-          class='text-neutral-300'>We do this through our extensive business savvy, experience in fashion, and understanding of the market. </span>
-      </p>
-      <img src='/img_1.webp' alt='img_1' class='w-fit hidden xl:block' />
-      <img src='/img_2.webp' alt='img_1' class='w-fit hidden sm:block xl:hidden' />
-      <PhotoCards client:only='solid-js' />
-    </section>
-    <section class='bg-white sm:min-h-screen sm:pt-28 pt-20 px-5'>
-      <p class='indent-10 md:text-[44px] text-[28px] leading-tight font-medium'>We work with the entire brand itself, analyzing
-        financials, business, production, market, and developing a strategy to execute. <span
-          class='text-neutral-300'>Mostly, we are starting with online sales, gradually moving towards bigger and more complex tasks. In our ideal world, you handle design and production while we take care of everything else.</span>
-      </p>
-      <Cards client:only='solid-js' />
-    </section>
-
-    <section class='bg-white sm:min-h-screen sm:pt-28 pt-20 px-5'>
-      <p class='indent-10 md:text-[44px] text-[28px] leading-tight font-medium'>
-        We charge income commissions and work as an outsourced team, developing partnership relationships.
-        <span class='text-neutral-300'>
-          Firstly, this is the only way for most brands to afford our services. Secondly, we put our skin in the game: if our work is ineffective, you are not risking anything; if it's effective, we make money together. Simple.
+    <section class="bg-white px-5 pt-20 sm:min-h-screen sm:pt-28">
+      <p
+        class="mb-10 indent-10 text-[28px] font-medium leading-tight md:text-[44px]"
+      >
+        We help brands make their first money, develop strategy, and take the
+        next steps in their journey, significantly increasing revenue and growth
+        rate. <span class="text-neutral-300"
+          >We do this through our extensive business savvy, experience in
+          fashion, and understanding of the market.
         </span>
       </p>
-      <InfoCards client:only='solid-js' />
+      <img src="/img_1.webp" alt="img_1" class="hidden w-fit xl:block" />
+      <img
+        src="/img_2.webp"
+        alt="img_1"
+        class="hidden w-fit sm:block xl:hidden"
+      />
+      <PhotoCards client:only="solid-js" />
     </section>
-    <section class='bg-white sm:pt-28 pt-20 px-5'>
-      <p class='indent-10 md:text-[44px] text-[28px] leading-tight font-medium'>We stand against old-fashioned ways imposed by the
-        community and simply making money. Independently, quickly, free of prejudices.<span
-          class='text-neutral-300'>
-        If you have a good product, a little bit of sales, and share our vision, we are ready to go. We work with jewelry, shoes, perfumes, accessories, clothing, and furniture.</span>
+    <section class="bg-white px-5 pt-20 sm:min-h-screen sm:pt-28">
+      <p class="indent-10 text-[28px] font-medium leading-tight md:text-[44px]">
+        We work with the entire brand itself, analyzing financials, business,
+        production, market, and developing a strategy to execute. <span
+          class="text-neutral-300"
+          >Mostly, we are starting with online sales, gradually moving towards
+          bigger and more complex tasks. In our ideal world, you handle design
+          and production while we take care of everything else.</span
+        >
+      </p>
+      <Cards client:only="solid-js" />
+    </section>
+
+    <section class="bg-white px-5 pt-20 sm:min-h-screen sm:pt-28">
+      <p class="indent-10 text-[28px] font-medium leading-tight md:text-[44px]">
+        We charge income commissions and work as an outsourced team, developing
+        partnership relationships.
+        <span class="text-neutral-300">
+          Firstly, this is the only way for most brands to afford our services.
+          Secondly, we put our skin in the game: if our work is ineffective, you
+          are not risking anything; if it's effective, we make money together.
+          Simple.
+        </span>
+      </p>
+      <InfoCards client:only="solid-js" />
+    </section>
+    <section class="bg-white px-5 pt-20 sm:pt-28">
+      <p class="indent-10 text-[28px] font-medium leading-tight md:text-[44px]">
+        We stand against old-fashioned ways imposed by the community and simply
+        making money. Independently, quickly, free of prejudices.<span
+          class="text-neutral-300"
+        >
+          If you have a good product, a little bit of sales, and share our
+          vision, we are ready to go. We work with jewelry, shoes, perfumes,
+          accessories, clothing, and furniture.</span
+        >
       </p>
     </section>
-    <section class='p-5 bg-white h-screen relative'>
-      <video autoplay muted loop playsinline id='another' class='w-full h-full object-cover z-0 rounded-[20px]'
-             poster='/img.webp'>
-        <source src='/rage_longer_compressed.mp4' type='video/mp4' />
+    <section class="relative h-screen bg-white p-5">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        id="another"
+        class="z-0 h-full w-full rounded-[20px] object-cover"
+        poster="/img.webp"
+      >
+        <source src="/rage_longer_compressed.mp4" type="video/mp4" />
       </video>
       <div
-        class='flex flex-col items-center absolute transform -translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2 z-10 w-full'>
-        <p class='text-white font-normal md:text-[88px] text-[48px] leading-[1.1] sm:leading-tight text-center md:max-w-4xl max-w-xs'>
+        class="absolute left-1/2 top-1/2 z-10 flex w-full -translate-x-1/2 -translate-y-1/2 transform flex-col items-center"
+      >
+        <p
+          class="max-w-xs text-center text-[48px] font-normal leading-[1.1] text-white sm:leading-tight md:max-w-4xl md:text-[88px]"
+        >
           Rage, rage against the dying of the light
         </p>
-        <div class='flex flex-row items-center justify-center gap-4 text-white mt-24 font-medium'>
+        <div
+          class="mt-24 flex flex-row items-center justify-center gap-4 font-medium text-white"
+        >
           <a>x.com</a>
           <a>pm.me</a>
           <a>t.me</a>
@@ -85,7 +136,7 @@ import SignIn from '../components/SignIn';
 </Layout>
 
 <style>
-    #hero {
-        height: 100vh;
-    }
+  #hero {
+    height: 100vh;
+  }
 </style>

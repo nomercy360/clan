@@ -7,53 +7,53 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang='en'>
-<head>
-  <meta charset='UTF-8' />
-  <meta name='description' content='Astro description' />
-  <meta name='viewport' content='width=device-width' />
-  <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-  <meta name='generator' content={Astro.generator} />
-  <title>{title}</title>
-</head>
-<body>
-<slot />
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 <style is:global>
-    @font-face {
-        font-display: swap;
-        font-family: 'PP Neue Montreal';
-        font-style: normal;
-        font-weight: 400;
-        src: url('/fonts/PPNeueMontreal-Book.woff') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
+  @font-face {
+    font-display: swap;
+    font-family: 'PP Neue Montreal';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/PPNeueMontreal-Book.woff') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
 
-    @font-face {
-        font-display: swap;
-        font-family: 'PP Neue Montreal';
-        font-style: normal;
-        font-weight: 500;
-        src: url('/fonts/PPNeueMontreal-Medium.woff') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
+  @font-face {
+    font-display: swap;
+    font-family: 'PP Neue Montreal';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/PPNeueMontreal-Medium.woff') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
 
-    body {
-        font-family: 'PP Neue Montreal', sans-serif;
-        background: black;
-    }
+  body {
+    font-family: 'PP Neue Montreal', sans-serif;
+    background: black;
+  }
 
-    *::-webkit-media-controls-panel {
-        display: none !important;
-        -webkit-appearance: none;
-    }
+  *::-webkit-media-controls-panel {
+    display: none !important;
+    -webkit-appearance: none;
+  }
 
-    *::-webkit-media-controls-play-button {
-        display: none !important;
-        -webkit-appearance: none;
-    }
+  *::-webkit-media-controls-play-button {
+    display: none !important;
+    -webkit-appearance: none;
+  }
 
-    *::-webkit-media-controls-start-playback-button {
-        display: none !important;
-        -webkit-appearance: none;
-    }
+  *::-webkit-media-controls-start-playback-button {
+    display: none !important;
+    -webkit-appearance: none;
+  }
 </style>
