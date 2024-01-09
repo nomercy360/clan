@@ -32,35 +32,25 @@ export default function Cards() {
     },
   ];
 
-  createEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % cardTexts.length);
-    }, 2000);
-
-    return () => clearInterval(interval);
-  });
-
   return (
     <Switch>
       <Match when={isMobile()}>
         <div
-          class='card flex flex-col gap-3 bg-[#F8F8F8] p-5 rounded-[20px] transition-opacity duration-500 ease-in-out mt-8 h-[390px]'>
-          <For each={cardTexts}>{(card, index) => (
-            <Show when={index() === activeIndex()}>
-              <div class='flex flex-col items-start gap-4'>
-                <div class='flex flex-row gap-4 items-center'>
-                  <BoxIcon isActive={0 === activeIndex()} />
-                  <DotsIcon isActive={1 === activeIndex()} />
-                  <ShapeIcon isActive={2 === activeIndex()} />
-                  <TriangleIcon isActive={3 === activeIndex()} />
-                </div>
-                <div>
-                  <p class='text-neutral-950 text-xl font-medium leading-tight'>{card.title}</p>
-                  <p class='text-gray text-lg mt-2 leading-tight'>{card.text}</p>
-                </div>
-              </div>
-            </Show>
-          )}</For>
+          class='card flex flex-col gap-3 bg-[#F8F8F8] p-5 rounded-[20px] transition-opacity duration-500 ease-in-out mt-8 h-[390px]'
+          onClick={() => setActiveIndex((prevIndex) => (prevIndex + 1) % cardTexts.length)}
+        >
+          <div class='flex flex-col items-start gap-4'>
+            <div class='flex flex-row gap-2 items-center'>
+              <BoxIcon isActive={0 === activeIndex()} />
+              <DotsIcon isActive={1 === activeIndex()} />
+              <ShapeIcon isActive={2 === activeIndex()} />
+              <TriangleIcon isActive={3 === activeIndex()} />
+            </div>
+            <div>
+              <p class='text-neutral-950 text-xl font-medium leading-tight'>{cardTexts[activeIndex()].title}</p>
+              <p class='text-gray text-lg mt-2 leading-tight'>{cardTexts[activeIndex()].text}</p>
+            </div>
+          </div>
         </div>
       </Match>
 
@@ -72,7 +62,7 @@ export default function Cards() {
               {card.icon}
               <div>
                 <p class='text-neutral-950 text-xl font-medium leading-tight'>{card.title}</p>
-                <p class='text-gray text-lg mt-2 leading-tight'>{card.text}</p>
+                <p class='text-gray text-lg mt-2 leading-tight font-medium'>{card.text}</p>
               </div>
             </div>
           )}</For>

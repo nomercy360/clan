@@ -23,14 +23,24 @@ export default function SignIn() {
     }
   };
 
+  const onOpenModal = () => {
+    setIsOpened(true);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const onCloseModal = () => {
+    setIsOpened(false);
+    document.body.style.overflow = 'unset';
+  };
+
   return (
     <div class='w-full z-50'>
       <Show when={!isOpened()}>
-        <nav class='flex flex-row justify-between w-full pt-6 px-5'>
-          <h1 class='text-white md:text-[44x] text-[28px] leading-[48px] font-medium'>CLAN™</h1>
+        <nav class='flex flex-row justify-between w-full pt-6 px-5 fixed inset-0 h-10'>
+          <p class='mix-blend-difference text-white md:text-[44x] text-[28px] leading-[48px] font-medium'>CLAN™</p>
           <button
-            class='bg-white h-[44px] backdrop-blur-md text-black font-medium px-4 rounded-[50px]'
-            onClick={() => setIsOpened(true)}
+            class='bg-white h-[44px] text-black px-4 rounded-[50px] font-medium'
+            onClick={() => onOpenModal()}
           >
             Sign In
           </button>
@@ -42,7 +52,7 @@ export default function SignIn() {
             <h1 class='text-white md:text-[44x] text-[28px] leading-[48px] font-medium'>CLAN™</h1>
             <button
               class='bg-white h-[44px] backdrop-blur-md text-black font-medium px-4 rounded-[50px]'
-              onClick={() => setIsOpened(false)}
+              onClick={() => onCloseModal()}
             >
               Close
             </button>
@@ -88,8 +98,6 @@ export default function SignIn() {
                 </button>
               </form>
             </div>
-            <p class='text-[#313131] text-base sm:text-lg'>All of the information we are asking stays between us. By sending this form, we all agree for
-              non-disclosure agreement, terms of service, and privacy policy.</p>
           </div>
         </div>
       </Show>

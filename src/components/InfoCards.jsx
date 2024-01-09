@@ -24,36 +24,29 @@ export default function InfoCards() {
     },
   ];
 
-  createEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % cardTexts.length);
-    }, 2000);
-
-    return () => clearInterval(interval);
-  });
 
   return (
     <Switch>
       <Match when={isMobile()}>
         <div
-          class='card flex flex-col justify-between items-start gap-3 bg-[#F8F8F8] p-5 rounded-[20px] transition-opacity duration-500 ease-in-out mt-8 h-[390px]'>
-          <For each={cardTexts}>{(card, index) => (
-            <Show when={index() === activeIndex()}>
-              <div class='flex flex-col items-start gap-4'>
-                <div class='flex flex-row gap-4 items-center'>
-                  <IconOne isActive={0 === activeIndex()} />
-                  <IconTwo isActive={1 === activeIndex()} />
-                </div>
-                <div>
-                  <p class='text-neutral-950 text-xl font-medium leading-tight'>{card.text}</p>
-                </div>
-              </div>
-              <div class='flex flex-col gap-1'>
-                <p class='text-neutral-950 text-2xl leading-tight'>{card.title}</p>
-                <p class='text-gray text-xl leading-tight'>{card.subtitle}</p>
-              </div>
-            </Show>
-          )}</For>
+          class='card flex flex-col justify-between items-start gap-3 bg-[#F8F8F8] p-5 rounded-[20px] mt-8 h-[390px]'
+          onClick={() => setActiveIndex((prevIndex) => (prevIndex + 1) % cardTexts.length)}
+        >
+          <div class='flex flex-col items-start gap-4'>
+            <div class='flex flex-row gap-2 items-center'>
+              <IconOne isActive={0 === activeIndex()} />
+              <IconTwo isActive={1 === activeIndex()} />
+            </div>
+            <div>
+              <p class='text-neutral-950 text-xl font-medium leading-tight'>
+                {cardTexts[activeIndex()].text}
+              </p>
+            </div>
+          </div>
+          <div class='flex flex-col'>
+            <p class='text-neutral-950 text-2xl leading-none font-medium'>{cardTexts[activeIndex()].title}</p>
+            <p class='text-gray text-xl leading-tight font-medium'>{cardTexts[activeIndex()].subtitle}</p>
+          </div>
         </div>
       </Match>
 
