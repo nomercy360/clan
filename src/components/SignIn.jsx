@@ -1,11 +1,9 @@
-import { createSignal, Match, Show, Switch } from 'solid-js';
+import { createSignal } from 'solid-js';
 
 export default function SignIn() {
   const [email, setEmail] = createSignal('');
   const [contactName, setContactName] = createSignal('');
   const [brandInfo, setBrandInfo] = createSignal('');
-
-  const [isOpened, setIsOpened] = createSignal(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,89 +25,53 @@ export default function SignIn() {
     }
   };
 
-  const onOpenModal = () => {
-    setIsOpened(true);
-    document.body.style.overflow = 'hidden';
-  };
-
-  const onCloseModal = () => {
-    setIsOpened(false);
-    document.body.style.overflow = 'unset';
-  };
-
   return (
-    <div class="z-50 w-full">
-      <Show when={!isOpened()}>
-        <nav class="fixed inset-0 flex h-10 w-full flex-row justify-between px-3 pt-6 sm:px-5">
-          <p class="text-[28px] font-medium leading-[48px] text-white mix-blend-difference md:text-[44x]">
-            CLAN™
-          </p>
-          <button
-            class="h-[44px] rounded-[50px] bg-white px-4 font-medium text-black"
-            onClick={() => onOpenModal()}
-          >
-            Sign In
-          </button>
-        </nav>
-      </Show>
-      <Show when={isOpened()}>
-        <div class="fixed inset-0 z-[999] flex flex-col items-start justify-start bg-black">
-          <nav class="flex w-full flex-row justify-between px-3 pt-6 sm:px-5">
-            <h1 class="text-[28px] font-medium leading-[48px] text-white md:text-[44x]">
-              CLAN™
-            </h1>
-            <button
-              class="h-[44px] rounded-[50px] bg-white px-4 font-medium text-black backdrop-blur-md"
-              onClick={() => onCloseModal()}
-            >
-              Close
-            </button>
-          </nav>
-          <div class="mt-5 flex h-full w-full flex-col justify-between p-3 sm:w-1/2 sm:p-5">
-            <div>
-              <p class="mb-10 max-w-md text-3xl leading-tight text-white sm:text-4xl">
-                submit an application. We’ll contact you within 2-3 business
-                days
-              </p>
-              <form onSubmit={handleSubmit}>
-                <div class="mb-4">
-                  <input
-                    type="text"
-                    class="focus:shadow-outline h-[60px] w-full appearance-none rounded-[52px] bg-[#111] px-7 text-base leading-tight text-white placeholder:text-[#595959] focus:outline-none sm:h-[72px] sm:text-2xl"
-                    id="email"
-                    placeholder="E-mail, Telegram, or WhatsApp number"
-                    onInput={(e) => setEmail(e.target.value)}
-                  />
-                </div>
-                <div class="mb-4">
-                  <input
-                    type="text"
-                    class="focus:shadow-outline h-[60px] w-full appearance-none rounded-[52px] bg-[#111] px-7 text-base leading-tight text-white placeholder:text-[#595959] focus:outline-none sm:h-[72px] sm:text-2xl"
-                    id="contactName"
-                    placeholder="Contact name"
-                    onInput={(e) => setContactName(e.target.value)}
-                  />
-                </div>
-                <div class="mb-4">
-                  <input
-                    type="text"
-                    class="focus:shadow-outline mb-3 h-[60px] w-full appearance-none rounded-[52px] bg-[#111] px-7 text-base leading-tight text-white placeholder:text-[#595959] focus:outline-none sm:h-[72px] sm:text-2xl"
-                    id="brandInfo"
-                    placeholder="Brand’s instagram or website"
-                    onInput={(e) => setBrandInfo(e.target.value)}
-                  />
-                </div>
-                <button
-                  class="focus:shadow-outline h-[60px] w-full rounded-[52px] bg-white px-4 text-base font-medium text-black focus:outline-none sm:h-[64px] sm:text-2xl"
-                  type="submit"
-                >
-                  Send application
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </Show>
-    </div>
+    <form onSubmit={handleSubmit} class="mt-16 w-full max-w-sm">
+      <div class="mb-4">
+        <input
+          type="text"
+          class="focus:shadow-outline h-[60px] w-full appearance-none rounded-[52px] bg-[#F8F8F8] px-7 text-base leading-tight text-black placeholder:text-[#B0AEAE] focus:outline-none"
+          id="email"
+          placeholder="E-mail, Telegram, or WhatsApp number"
+          onInput={(e) => setEmail(e.target.value)}
+        />
+      </div>
+      <div class="mb-4">
+        <input
+          type="text"
+          class="focus:shadow-outline h-[60px] w-full appearance-none rounded-[52px] bg-[#F8F8F8] px-7 text-base leading-tight text-black placeholder:text-[#B0AEAE] focus:outline-none"
+          id="contactName"
+          placeholder="Contact name"
+          onInput={(e) => setContactName(e.target.value)}
+        />
+      </div>
+      <div class="mb-4">
+        <input
+          type="text"
+          class="focus:shadow-outline mb-3 h-[60px] w-full appearance-none rounded-[52px] bg-[#F8F8F8] px-7 text-base leading-tight text-black placeholder:text-[#B0AEAE] focus:outline-none"
+          id="brandInfo"
+          placeholder="Brand’s instagram or website"
+          onInput={(e) => setBrandInfo(e.target.value)}
+        />
+      </div>
+      <button
+        class="focus:shadow-outline flex h-[60px] w-full flex-row items-center justify-center gap-3 rounded-[52px] bg-black px-4 text-base text-white focus:outline-none"
+        type="submit"
+      >
+        Send application
+        <svg
+          width="11"
+          height="9"
+          viewBox="0 0 11 9"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.86902 0.0149994C6.57902 0.775 7.26902 1.48 7.93902 2.13C8.61902 2.77 9.35402 3.44 10.144 4.14L10.504 4.455L10.309 4.62C9.48902 5.34 8.71402 6.05 7.98402 6.75C7.26402 7.45 6.55902 8.165 5.86902 8.895L5.01402 8.04L7.05402 6.165C7.49402 5.785 7.95902 5.405 8.44902 5.025C7.82902 5.045 7.22402 5.055 6.63402 5.055H0.604023V3.855H6.63402C7.21402 3.855 7.81402 3.875 8.43402 3.915C7.95402 3.525 7.49402 3.135 7.05402 2.745L5.01402 0.869999L5.86902 0.0149994Z"
+            fill="white"
+          />
+        </svg>
+      </button>
+    </form>
   );
 }

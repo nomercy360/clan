@@ -1,8 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Cards from '../components/Cards';
-import InfoCards from '../components/InfoCards';
-import PhotoCards from '../components/PhotoCards';
+import Card from '../components/Card.astro';
+import InfoCard from '../components/InfoCard.astro';
+import Badge from '../components/Badge.astro';
+import ImageCard from '../components/ImageCard.astro';
 import SignIn from '../components/SignIn';
 ---
 
@@ -11,137 +12,366 @@ import SignIn from '../components/SignIn';
   description="We are transforming young fashion brands, independent designers, and productions into competitive and stable businesses on both the local and global stage."
 >
   <main>
-    <video
-      autoplay
-      muted
-      loop
-      playsinline
-      id="myVideo"
-      class="absolute left-0 top-0 z-0 h-screen w-full object-cover"
-      poster="/img.webp"
+    <header
+      class="fixed top-0 z-10 flex h-20 w-full flex-row items-center justify-between border-b border-neutral-200 bg-white px-5"
     >
-      <source src="/rage_longer_compressed.mp4" type="video/mp4" />
-    </video>
-    <section id="hero" class="flex flex-col items-start justify-between">
-      <SignIn client:only="solid-js" />
-      <div
-        class="z-10 flex h-full flex-col justify-between px-3 py-5 sm:px-5 md:justify-end"
+      <p class="text-3xl">CLAN</p>
+      <button
+        class="h-11 rounded-[50px] bg-neutral-200 px-8 text-sm text-neutral-900"
       >
-        <h1
-          class="mt-14 text-[48px] leading-none text-white sm:mt-0 sm:leading-tight md:text-[88px]"
+        Contact Us
+      </button>
+    </header>
+    <section
+      class="flex flex-col items-center justify-center pb-24 pt-36 text-center"
+    >
+      <h1 class="text-base">Fashion accelerator</h1>
+      <h2 class="leading-tighter mt-4 max-w-6xl text-7xl">
+        We transform independent fashion producers and brands into competitive
+        businesses, accelerating their growth
+      </h2>
+      <button
+        class="mt-10 h-16 rounded-[50px] bg-neutral-900 px-4 text-xl text-white"
+      >
+        Get started
+      </button>
+    </section>
+    <section class="flex flex-col items-center justify-start py-20 text-center">
+      <div
+        class="flex h-6 items-center justify-center rounded-2xl bg-neutral-300 px-2 text-xs text-neutral-400"
+      >
+        Approach
+      </div>
+      <div class="mt-8 max-w-4xl">
+        <h3 class="leading-tighter text-6xl">
+          Finally, a companion that cares about your success
+        </h3>
+        <p class="mt-4 text-neutral-400">
+          Unlike agencies you've worked with before, we don't charge for our
+          services. Rather than wasting time selling unnecessary services, we
+          focus on accelerating your growth and earn together.
+        </p>
+      </div>
+      <div class="mt-16 grid max-w-6xl grid-cols-4 gap-1">
+        <div
+          class="flex flex-col items-center border-r border-neutral-200 px-4 text-center"
         >
-          growth agency for fashion brands and independent designers
-        </h1>
-        <div class="mt-8 flex grid-cols-3 flex-col gap-4 md:grid">
-          <p class="text-xl leading-tight text-white">
-            10X average revenue growth <span class="text-dusty-rose"
-              >of connected brands in the first year of work</span
-            >
+          <p class="text-lg">Investment</p>
+          <p class="text-sm">
+            In the first year, we invest $240k worth of our services and support
+            marketing from the outset.
           </p>
-          <p class="text-xl leading-tight text-white">
-            5+ years of saved time <span class="text-dusty-rose"
-              >on growth and experiments due to our extensive background</span
-            >
+        </div>
+        <div
+          class="flex flex-col items-center border-r border-neutral-200 px-4 text-center"
+        >
+          <p class="text-lg">Explosive growth</p>
+          <p class="text-sm">
+            Typically, our work triples sales in the first quarter and increases
+            monthly revenue tenfold within a year.
           </p>
-          <p class="text-xl leading-tight text-white">
-            30% less operational costs<span class="text-dusty-rose"
-              >, due automations and better management</span
-            >
+        </div>
+        <div
+          class="flex flex-col items-center border-r border-neutral-200 px-4 text-center"
+        >
+          <p class="text-lg">Skin in the game</p>
+          <p class="text-sm">
+            We work on an equity and success fee basis without touching your
+            cash reserves.
+          </p>
+        </div>
+        <div
+          class="flex flex-col items-center border-r border-neutral-200 px-4 text-center"
+        >
+          <p class="text-lg">Open intentions</p>
+          <p class="text-sm">
+            You understand perfectly what we are doing, and we both make joint
+            strategic and tactical decisions.
           </p>
         </div>
       </div>
     </section>
-    <section class="bg-white px-3 pt-20 sm:min-h-screen sm:px-5 sm:pt-28">
-      <p
-        class="mb-10 indent-10 text-[28px] font-medium leading-tight md:text-[44px]"
+    <section class="mt-10 flex flex-col items-center justify-start text-center">
+      <div
+        class="flex h-6 items-center justify-center rounded-2xl bg-neutral-300 px-2 text-xs text-neutral-400"
       >
-        We help brands make their first money, develop strategy, and take the
-        next steps in their journey, significantly increasing revenue and growth
-        rate. <span class="text-neutral-300"
-          >We do this through our extensive business savvy, experience in
-          fashion, and understanding of the market.
-        </span>
-      </p>
-      <img src="/img_1.webp" alt="img_1" class="hidden w-fit xl:block" />
-      <img
-        src="/img_2.webp"
-        alt="img_1"
-        class="hidden w-fit sm:block xl:hidden"
-      />
-      <PhotoCards client:only="solid-js" />
+        Services
+      </div>
+      <div class="mt-8 max-w-4xl">
+        <h3 class="leading-tighter text-6xl">
+          Focus on production, we’ll handle the rest
+        </h3>
+        <p class="mt-4 text-neutral-400">
+          A dedicated team of outstanding professionals with diverse experience
+          in design, product, operations, and technology is now part of your
+          brand
+        </p>
+      </div>
+      <div class="mt-8 grid max-w-4xl grid-cols-5 gap-4">
+        <Card
+          title="Websites design and engineering"
+          text="Understanding most valuable and sellable products, we are developing assortment. Sometimes it includes "
+        />
+        <Card
+          title="Assortment matrix design"
+          text="Understanding most valuable and sellable products, we are developing assortment. Sometimes it includes "
+        />
+        <Card
+          title="Product modelling and design"
+          text="Understanding most valuable and sellable products, we are developing assortment. Sometimes it includes "
+        />
+        <Card
+          title="Brand development and strategy"
+          text="We help to develop brand visual identity and "
+        />
+        <Card
+          title="Brand development and strategy"
+          text="We help to develop brand visual identity and "
+        />
+        <Card
+          title="Customers acquisition and marketing"
+          text="Understanding most valuable and sellable products, we are developing assortment. Sometimes it includes "
+        />
+        <Card
+          title="Financial and revenue management"
+          text="Understanding most valuable and sellable products, we are developing assortment. Sometimes it includes "
+        />
+        <Card
+          title="Customer relationships and support"
+          text="Understanding most valuable and sellable products, we are developing assortment. Sometimes it includes "
+        />
+        <Card
+          title="Operational processes automation"
+          text="Understanding most valuable and sellable products, we are developing assortment. Sometimes it includes "
+        />
+        <Card
+          title="Growth strategy and management"
+          text="We help to develop brand visual identity and "
+        />
+      </div>
     </section>
-    <section class="bg-white px-3 pt-20 sm:min-h-screen sm:px-5 sm:pt-28">
-      <p class="indent-10 text-[28px] font-medium leading-tight md:text-[44px]">
-        We work with the entire brand itself, analyzing financials, business,
-        production, market, and developing a strategy to execute. <span
-          class="text-neutral-300"
-          >Mostly, we are starting with online sales, gradually moving towards
-          bigger and more complex tasks. In our ideal world, you handle design
-          and production while we take care of everything else.</span
+    <section class="mt-10 flex flex-col items-center justify-start text-center">
+      <div
+        class="flex h-6 items-center justify-center rounded-2xl bg-neutral-300 px-2 text-xs text-neutral-400"
+      >
+        Workflow
+      </div>
+      <div class="mt-8 max-w-4xl">
+        <h3 class="leading-tighter text-6xl">
+          Nine months to transform passion into profitable business
+        </h3>
+        <p class="mt-4 text-neutral-400">
+          We use 3-month cycles and startup-like approach, targeting fast
+          growth, rapid hypothesis testing, and products development.
+        </p>
+      </div>
+      <div class="mt-16 grid grid-cols-4 gap-4 px-5">
+        <InfoCard
+          title="Ideas and people"
+          text="During the first three months, we focus on conceptualization and ideation, discussing strategies, design, and collaborative brainstorming, all while testing online sales."
         >
-      </p>
-      <Cards client:only="solid-js" />
+          <svg
+            slot="icon"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="12" cy="12" r="12" fill="#141414"></circle>
+            <rect x="11" y="6" width="2" height="12" fill="#F8F8F8"></rect>
+          </svg>
+          <Badge text="Ideas" />
+          <Badge text="Branding" />
+          <Badge text="Unit economy" />
+          <Badge text="Strategy concept" />
+          <Badge text="Advertising testing" />
+        </InfoCard>
+        <InfoCard
+          title="Design & creation"
+          text="From months 3-6, we develop the product by creating photos and videos for the store and promotion, designing and developing the website, advertising, and curating the assortment of items."
+        >
+          <svg
+            slot="icon"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="12" cy="12" r="12" fill="#141414"></circle>
+            <rect x="9" y="6" width="2" height="12" fill="#F8F8F8"></rect>
+            <rect x="13" y="6" width="2" height="12" fill="#F8F8F8"></rect>
+          </svg>
+          <Badge text="Assortment design" />
+          <Badge text="Product design" />
+          <Badge text="Website" />
+          <Badge text="Shooting" />
+          <Badge text="Advertisign" />
+        </InfoCard>
+        <InfoCard
+          title="Delivery"
+          text="From months 6-9, we launch the website, increase advertising budgets, and work towards building a better and larger product. During this stage, we also focus on financial modeling, customer acquisition, and retention marketing."
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            slot="icon"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="12" cy="12" r="12" fill="#141414"></circle>
+            <rect x="11" y="6" width="2" height="12" fill="#F8F8F8"></rect>
+            <rect x="15" y="6" width="2" height="12" fill="#F8F8F8"></rect>
+            <rect x="7" y="6" width="2" height="12" fill="#F8F8F8"></rect>
+          </svg>
+          <Badge text="Launching" />
+          <Badge text="Financial modeling" />
+          <Badge text="Marketing" />
+          <Badge text="Advertising" />
+          <Badge text="Delivery" />
+        </InfoCard>
+        <InfoCard
+          title="Growth"
+          text="Beyond this point, we continually improve by optimizing financials, marketing efforts, logistics, and strategic partnerships."
+        >
+          <svg
+            slot="icon"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="12" cy="12" r="12" fill="#141414"></circle>
+            <path
+              d="M12.126 10.5874C13.4248 8.83398 14.3062 8.24023 15.5864 8.24023C17.5718 8.24023 18.9355 9.66895 18.9355 11.7656C18.9355 13.8438 17.5811 15.2632 15.5957 15.2632C14.2783 15.2632 13.3413 14.6323 12.126 12.9438C10.9106 14.6323 9.97363 15.2632 8.65625 15.2632C6.6709 15.2632 5.31641 13.8438 5.31641 11.7656C5.31641 9.66895 6.68018 8.24023 8.66553 8.24023C9.9458 8.24023 10.8271 8.83398 12.126 10.5874ZM17.4048 11.7656C17.4048 10.4854 16.6812 9.67822 15.5679 9.67822C14.77 9.67822 14.2041 10.1328 12.9702 11.7656C14.0371 13.3149 14.6865 13.8252 15.5864 13.8252C16.6904 13.8252 17.4048 13.0273 17.4048 11.7656ZM6.84717 11.7656C6.84717 13.0273 7.56152 13.8252 8.66553 13.8252C9.56543 13.8252 10.2148 13.3149 11.2817 11.7656C10.0479 10.1328 9.48193 9.67822 8.68408 9.67822C7.5708 9.67822 6.84717 10.4854 6.84717 11.7656Z"
+              fill="#F6F6F6"></path>
+          </svg>
+          <Badge text="Improvements" />
+          <Badge text="Retention" />
+          <Badge text="Growth" />
+          <Badge text="Automations" />
+          <Badge text="Logistics" />
+          <Badge text="Partnerships" />
+        </InfoCard>
+      </div>
+    </section>
+    <section class="flex flex-col items-center justify-start py-20 text-center">
+      <div
+        class="flex h-6 items-center justify-center rounded-2xl bg-neutral-300 px-2 text-xs text-neutral-400"
+      >
+        Join us
+      </div>
+      <div class="mt-8 max-w-4xl">
+        <h3 class="leading-tighter text-6xl">
+          We partner with early-stage brands with market advantages
+        </h3>
+        <p class="mt-4 text-neutral-400">
+          We expect our partners to have at least one year of experience.
+          However, if you think we could be a good fit, contact us by email or
+          telegram.
+        </p>
+      </div>
+      <div class="mt-16 grid max-w-6xl grid-cols-3 gap-1">
+        <div
+          class="flex flex-col items-center border-r border-neutral-200 px-4 text-center"
+        >
+          <p class="text-lg">Design</p>
+          <p class="text-sm">
+            We believe that beauty sells and good design is essential. We are
+            looking for individuals with design or visionary talent who can set
+            trends.
+          </p>
+        </div>
+        <div
+          class="flex flex-col items-center border-r border-neutral-200 px-4 text-center"
+        >
+          <p class="text-lg">Price</p>
+          <p class="text-sm">
+            A solid financial model is vital. If you've figured out how to
+            reduce production and material costs, we'll be happy to assist with
+            everything else.
+          </p>
+        </div>
+        <div
+          class="flex flex-col items-center border-r border-neutral-200 px-4 text-center"
+        >
+          <p class="text-lg">Market</p>
+          <p class="text-sm">
+            We support innovators. If you are working on a product or market
+            that doesn't yet exist and you believe it's a good fit, let's
+            discuss it.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="flex flex-col items-center justify-start py-20 text-center">
+      <div
+        class="flex h-6 items-center justify-center rounded-2xl bg-neutral-300 px-2 text-xs text-neutral-400"
+      >
+        Stories
+      </div>
+      <div class="mt-8 max-w-4xl">
+        <h3 class="leading-tighter text-6xl">
+          No secrets. Open intentions. Read how we work
+        </h3>
+        <p class="mt-4 text-neutral-400">
+          We've collaborated, consulted, and partnered with brands from all over
+          the world, and we're eager to share our knowledge. Read our case
+          studies on Medium and x.com.
+        </p>
+      </div>
+      <div class="mt-16 grid min-w-[1400px] grid-cols-4 gap-4">
+        <ImageCard
+          button="Read now"
+          title="Omut jewelry"
+          text="How we transformed the unprofitable brand into a recognizable and organized production with controllable sales"
+        >
+          <img src="/omut.png" alt="" class="h-[600px] w-[338px]" />
+        </ImageCard>
+        <ImageCard
+          button="Soon"
+          title="Omut jewelry"
+          text="How a simple rearrangement of assortment can increase sales, and why high-fashion is flawed"
+        >
+          <img src="/vereja.png" alt="" class="h-[600px] w-[338px]" />
+        </ImageCard>
+        <ImageCard
+          button="Soon"
+          title="Omut jewelry"
+          text="How we've cut the cost of website development using no-code and found hidden costs within the economy"
+        >
+          <img src="/mirstores.png" alt="" class="h-[600px] w-[338px]" />
+        </ImageCard>
+        <ImageCard
+          button="Soon"
+          title="Beaded breakfast"
+          text="Why costume jewellery is a highly scalable business model and how to utilise it to support your main brand"
+        >
+          <img src="/beaded_breakfast.png" alt="" class="h-[600px] w-[338px]" />
+        </ImageCard>
+      </div>
+    </section>
+    <section class="flex flex-col items-center justify-start py-20 text-center">
+      <div
+        class="flex h-6 items-center justify-center rounded-2xl bg-neutral-300 px-2 text-xs text-neutral-400"
+      >
+        Get started
+      </div>
+      <div class="mt-8 max-w-4xl">
+        <h3 class="leading-tighter text-6xl">
+          Let’s build the next success story together
+        </h3>
+      </div>
+      <SignIn client:only="solid-js" />
     </section>
 
-    <section class="bg-white px-3 pt-20 sm:min-h-screen sm:px-5 sm:pt-28">
-      <p class="indent-10 text-[28px] font-medium leading-tight md:text-[44px]">
-        We charge income commissions and work as an outsourced team, developing
-        partnership relationships.
-        <span class="text-neutral-300">
-          Firstly, this is the only way for most brands to afford our services.
-          Secondly, we put our skin in the game: if our work is ineffective, you
-          are not risking anything; if it's effective, we make money together.
-          Simple.
-        </span>
-      </p>
-      <InfoCards client:only="solid-js" />
-    </section>
-    <section class="bg-white px-5 pt-20 sm:pt-28">
-      <p class="indent-10 text-[28px] font-medium leading-tight md:text-[44px]">
-        We stand against old-fashioned ways imposed by the community and simply
-        making money. Independently, quickly, free of prejudices.<span
-          class="text-neutral-300"
-        >
-          If you have a good product, a little bit of sales, and share our
-          vision, we are ready to go. We work with jewelry, shoes, perfumes,
-          accessories, clothing, and furniture.</span
-        >
-      </p>
-    </section>
-    <section class="relative h-screen bg-white px-3 py-5 sm:px-5">
-      <video
-        autoplay
-        muted
-        loop
-        playsinline
-        id="another"
-        class="z-0 h-full w-full rounded-[20px] object-cover"
-        poster="/img.webp"
-      >
-        <source src="/RedWoman_compressed.mp4" type="video/mp4" />
-      </video>
-      <div
-        class="absolute left-1/2 top-1/2 z-10 flex w-full -translate-x-1/2 -translate-y-1/2 transform flex-col items-center"
-      >
-        <p
-          class="max-w-xs text-center text-[48px] font-normal leading-[1.1] text-white sm:leading-tight md:max-w-4xl md:text-[88px]"
-        >
-          Rage, rage against the dying of the light
-        </p>
-        <div
-          class="mt-24 flex flex-row items-center justify-center gap-4 font-medium text-white"
-        >
-          <a href="https://x.com/clanplatform" target="_blank">x.com</a>
-          <a href="mailto:clanplatform@pm.me">pm.me</a>
-          <a href="https://t.me/nikitaaxel" target="_blank">t.me</a>
-        </div>
-      </div>
-    </section>
+    <style></style>
+    <footer class="flex h-10 w-full flex-row items-center justify-between px-5">
+      <p>© Clan Platform 2024. All rights reserved</p>
+      <p>Design & engineering by Apparat</p>
+    </footer>
   </main>
 </Layout>
-
-<style>
-  #hero {
-    height: 100vh;
-  }
-</style>
