@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Cards from '../components/Cards';
 import InfoCards from '../components/InfoCards';
-import ImageCard from '../components/ImageCard.astro';
+import ImageCards from '../components/ImageCards';
 import SignIn from '../components/SignIn';
 import TextCard from '../components/TextCard.astro';
 ---
@@ -95,7 +95,7 @@ import TextCard from '../components/TextCard.astro';
       />
     </section>
     <section
-      class="flex flex-col items-center justify-start px-7 py-20 text-center sm:px-10"
+      class="flex flex-col items-center justify-start px-7 py-20 text-center sm:px-5"
     >
       <div
         class="flex h-6 items-center justify-center rounded-2xl bg-neutral-300 px-2 text-xs text-neutral-400"
@@ -133,7 +133,7 @@ import TextCard from '../components/TextCard.astro';
       </div>
     </section>
     <section
-      class="mt-10 flex flex-col items-center justify-start px-2 text-center sm:px-10"
+      class="mt-10 flex flex-col items-center justify-start px-2 text-center sm:px-5"
     >
       <div
         class="flex h-6 items-center justify-center rounded-2xl bg-neutral-300 px-2 text-xs text-neutral-400"
@@ -153,7 +153,7 @@ import TextCard from '../components/TextCard.astro';
       <Cards client:only="solid-js" />
     </section>
     <section
-      class="mt-10 flex flex-col items-center justify-start px-3 text-center sm:px-10"
+      class="mt-10 flex flex-col items-center justify-start px-3 text-center sm:px-5"
     >
       <div
         class="flex h-6 items-center justify-center rounded-2xl bg-neutral-300 px-2 text-xs text-neutral-400"
@@ -172,7 +172,7 @@ import TextCard from '../components/TextCard.astro';
       <InfoCards client:only="solid-js" />
     </section>
     <section
-      class="flex flex-col items-center justify-start px-7 py-20 text-center sm:px-10"
+      class="flex flex-col items-center justify-start px-7 py-20 text-center sm:px-5"
     >
       <div
         class="flex h-6 items-center justify-center rounded-2xl bg-neutral-300 px-2 text-xs text-neutral-400"
@@ -189,7 +189,7 @@ import TextCard from '../components/TextCard.astro';
           telegram.
         </p>
       </div>
-      <div class="mt-16 grid max-w-6xl gap-4 sm:grid-cols-4 sm:gap-1">
+      <div class="mt-16 grid max-w-6xl gap-4 sm:grid-cols-3 sm:gap-1">
         <TextCard
           title="Dedicated team"
           text="Outstanding professionals with multi-faceted experience including design, product, operations and technology are now onboard of your brand"
@@ -207,7 +207,7 @@ import TextCard from '../components/TextCard.astro';
     </section>
   </main>
   <section
-    class="flex flex-col items-center justify-start px-7 py-20 text-center sm:px-10"
+    class="flex flex-col items-center justify-start px-2.5 py-20 text-center sm:px-5"
   >
     <div
       class="flex h-6 items-center justify-center rounded-2xl bg-neutral-300 px-2 text-xs text-neutral-400"
@@ -224,39 +224,10 @@ import TextCard from '../components/TextCard.astro';
         on Medium and x.com.
       </p>
     </div>
-    <div class="mt-16 grid min-w-[1400px] grid-cols-4 gap-4">
-      <ImageCard
-        button="Read now"
-        title="Omut jewelry"
-        text="How we transformed the unprofitable brand into a recognizable and organized production with controllable sales"
-      >
-        <img src="/omut.png" alt="" class="h-[600px] w-[338px]" />
-      </ImageCard>
-      <ImageCard
-        button="Soon"
-        title="Omut jewelry"
-        text="How a simple rearrangement of assortment can increase sales, and why high-fashion is flawed"
-      >
-        <img src="/vereja.png" alt="" class="h-[600px] w-[338px]" />
-      </ImageCard>
-      <ImageCard
-        button="Soon"
-        title="Omut jewelry"
-        text="How we've cut the cost of website development using no-code and found hidden costs within the economy"
-      >
-        <img src="/mirstores.png" alt="" class="h-[600px] w-[338px]" />
-      </ImageCard>
-      <ImageCard
-        button="Soon"
-        title="Beaded breakfast"
-        text="Why costume jewellery is a highly scalable business model and how to utilise it to support your main brand"
-      >
-        <img src="/beaded_breakfast.png" alt="" class="h-[600px] w-[338px]" />
-      </ImageCard>
-    </div>
+    <ImageCards client:only="solid-js" />
   </section>
   <section
-    class="flex flex-col items-center justify-start px-2 py-20 text-center sm:px-10"
+    class="flex flex-col items-center justify-start px-2 py-20 text-center sm:px-5"
   >
     <div
       class="flex h-6 items-center justify-center rounded-2xl bg-neutral-300 px-2 text-xs text-neutral-400"

@@ -105,16 +105,26 @@ export default function InfoCards() {
       </Match>
 
       <Match when={!isMobile()}>
-        <div class="mt-8 grid h-[390px] w-full grid-cols-5 gap-4">
+        <div class="mt-8 grid w-full grid-cols-2 gap-4 lg:grid-cols-4">
           <For each={cardTexts}>
             {(card, index) => (
-              <div class="card flex flex-col items-start justify-between rounded-[20px] bg-[#F8F8F8] p-5 ">
-                <p class="text-xl font-medium leading-tight text-neutral-950">
-                  {card.text}
-                </p>
-                <p class="text-2xl leading-tight text-neutral-950">
-                  {card.title}
-                </p>
+              <div class="flex h-[400px] flex-col items-start justify-between gap-3 rounded-[32px] bg-[#F6F6F6] p-5">
+                <div class="flex flex-col items-center justify-center gap-2 text-center">
+                  {card.icon}
+                  <p class="mt-2 text-lg text-neutral-900">{card.title}</p>
+                  <p class="text-sm text-[#A3A3A3]">{card.text}</p>
+                </div>
+                <div class="flex flex-col gap-5">
+                  <div class="flex flex-row flex-wrap items-center justify-start gap-2">
+                    <For each={card.badges}>
+                      {(badge) => (
+                        <div class="flex h-8 flex-col items-center justify-center rounded-[38px] bg-white px-2.5 text-xs text-neutral-400">
+                          {badge}
+                        </div>
+                      )}
+                    </For>
+                  </div>
+                </div>
               </div>
             )}
           </For>
