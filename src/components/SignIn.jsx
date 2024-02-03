@@ -30,7 +30,7 @@ export default function SignIn() {
       <div class="mb-4">
         <input
           type="text"
-          class="focus:shadow-outline h-[60px] w-full appearance-none rounded-[52px] bg-[#F8F8F8] px-7 text-base leading-tight text-black placeholder:text-[#B0AEAE] focus:outline-none"
+          class="focus:shadow-outline h-12 w-full appearance-none rounded-[52px] bg-[#F8F8F8] px-7 text-sm leading-tight text-black placeholder:text-[#B0AEAE] focus:outline-none sm:h-16 sm:text-base"
           id="email"
           placeholder="E-mail, Telegram, or WhatsApp number"
           onInput={(e) => setEmail(e.target.value)}
@@ -39,7 +39,7 @@ export default function SignIn() {
       <div class="mb-4">
         <input
           type="text"
-          class="focus:shadow-outline h-[60px] w-full appearance-none rounded-[52px] bg-[#F8F8F8] px-7 text-base leading-tight text-black placeholder:text-[#B0AEAE] focus:outline-none"
+          class="focus:shadow-outline h-12 w-full appearance-none rounded-[52px] bg-[#F8F8F8] px-7 text-sm leading-tight text-black placeholder:text-[#B0AEAE] focus:outline-none sm:h-16 sm:text-base"
           id="contactName"
           placeholder="Contact name"
           onInput={(e) => setContactName(e.target.value)}
@@ -48,14 +48,14 @@ export default function SignIn() {
       <div class="mb-4">
         <input
           type="text"
-          class="focus:shadow-outline mb-3 h-[60px] w-full appearance-none rounded-[52px] bg-[#F8F8F8] px-7 text-base leading-tight text-black placeholder:text-[#B0AEAE] focus:outline-none"
+          class="focus:shadow-outline mb-3 h-12 w-full appearance-none rounded-[52px] bg-[#F8F8F8] px-7 text-sm leading-tight text-black placeholder:text-[#B0AEAE] focus:outline-none sm:h-16 sm:text-base"
           id="brandInfo"
           placeholder="Brand’s instagram or website"
           onInput={(e) => setBrandInfo(e.target.value)}
         />
       </div>
       <button
-        class="focus:shadow-outline flex h-[60px] w-full flex-row items-center justify-center gap-3 rounded-[52px] bg-black px-4 text-base text-white focus:outline-none"
+        class="focus:shadow-outline flex h-12 w-full flex-row items-center justify-center gap-3 rounded-[52px] bg-black px-4 text-sm text-white focus:outline-none sm:h-16 sm:text-base"
         type="submit"
       >
         Send application
