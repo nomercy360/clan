@@ -5,6 +5,7 @@ import InfoCards from '../components/InfoCards';
 import ImageCards from '../components/ImageCards';
 import SignIn from '../components/SignIn';
 import TextCard from '../components/TextCard.astro';
+import Chip from '../components/Chip.astro';
 ---
 
 <Layout
@@ -27,13 +28,13 @@ import TextCard from '../components/TextCard.astro';
     >
       <h1 class="text-sm sm:text-base">Fashion accelerator</h1>
       <h2
-        class="mt-4 max-w-6xl text-3xl leading-tighter sm:text-6xl lg:text-7xl"
+        class="mt-4 max-w-6xl text-3xl font-light leading-tighter sm:text-6xl lg:text-7xl"
       >
         We transform independent fashion producers and brands into competitive
         businesses, accelerating their growth
       </h2>
       <button
-        class="mt-10 h-14 rounded-[50px] bg-neutral-900 px-4 text-base text-white sm:h-16 sm:text-xl"
+        class="mt-10 h-14 rounded-[50px] bg-neutral-900 px-4 text-base text-white sm:h-16 sm:text-lg"
       >
         Get started
       </button>
@@ -95,15 +96,11 @@ import TextCard from '../components/TextCard.astro';
       />
     </section>
     <section
-      class="flex flex-col items-center justify-start px-7 py-20 text-center sm:px-5"
+      class="mt-28 flex flex-col items-center justify-start px-7 text-center sm:mt-48 sm:px-5"
     >
-      <div
-        class="flex h-6 items-center justify-center rounded-2xl bg-neutral-300 px-2 text-xs text-neutral-400"
-      >
-        Approach
-      </div>
+      <Chip label="Approach" />
       <div class="mt-8 max-w-4xl">
-        <h3 class="text-3xl leading-tighter sm:text-6xl">
+        <h3 class="text-3xl font-light leading-tighter sm:text-6xl">
           Finally, a companion that cares about your success
         </h3>
         <p class="mt-4 text-base text-neutral-400 sm:text-lg">
@@ -133,15 +130,11 @@ import TextCard from '../components/TextCard.astro';
       </div>
     </section>
     <section
-      class="mt-10 flex flex-col items-center justify-start px-2 text-center sm:px-5"
+      class="mt-28 flex flex-col items-center justify-start px-2 text-center sm:mt-48 sm:px-5"
     >
-      <div
-        class="flex h-6 items-center justify-center rounded-2xl bg-neutral-300 px-2 text-xs text-neutral-400"
-      >
-        Services
-      </div>
+      <Chip label="Services" />
       <div class="mt-8 max-w-4xl px-5 sm:px-0">
-        <h3 class="text-3xl leading-tighter sm:text-6xl">
+        <h3 class="text-3xl font-light leading-tighter sm:text-6xl">
           Focus on production, we’ll handle the rest
         </h3>
         <p class="mt-4 text-base text-neutral-400 sm:text-lg">
@@ -153,15 +146,11 @@ import TextCard from '../components/TextCard.astro';
       <Cards client:only="solid-js" />
     </section>
     <section
-      class="mt-10 flex flex-col items-center justify-start px-3 text-center sm:px-5"
+      class="mt-28 flex flex-col items-center justify-start px-3 text-center sm:mt-48 sm:px-5"
     >
-      <div
-        class="flex h-6 items-center justify-center rounded-2xl bg-neutral-300 px-2 text-xs text-neutral-400"
-      >
-        Workflow
-      </div>
+      <Chip label="Workflow" />
       <div class="mt-8 max-w-4xl px-4 sm:px-0">
-        <h3 class="text-3xl leading-tighter sm:text-6xl">
+        <h3 class="text-3xl font-light leading-tighter sm:text-6xl">
           Nine months to transform passion into profitable business
         </h3>
         <p class="mt-4 text-base text-neutral-400 sm:text-lg">
@@ -172,15 +161,11 @@ import TextCard from '../components/TextCard.astro';
       <InfoCards client:only="solid-js" />
     </section>
     <section
-      class="flex flex-col items-center justify-start px-7 py-20 text-center sm:px-5"
+      class="mt-28 flex flex-col items-center justify-start px-7 text-center sm:mt-48 sm:px-5"
     >
-      <div
-        class="flex h-6 items-center justify-center rounded-2xl bg-neutral-300 px-2 text-xs text-neutral-400"
-      >
-        Join us
-      </div>
+      <Chip label="Join us" />
       <div class="mt-8 max-w-4xl">
-        <h3 class="text-3xl leading-tighter sm:text-6xl">
+        <h3 class="text-3xl font-light leading-tighter sm:text-6xl">
           We partner with early-stage brands with market advantages
         </h3>
         <p class="mt-4 text-base text-neutral-400 sm:text-lg">
@@ -207,15 +192,11 @@ import TextCard from '../components/TextCard.astro';
     </section>
   </main>
   <section
-    class="flex flex-col items-center justify-start px-2.5 py-20 text-center sm:px-5"
+    class="mt-28 flex flex-col items-center justify-start px-2.5 text-center sm:mt-48 sm:px-5"
   >
-    <div
-      class="flex h-6 items-center justify-center rounded-2xl bg-neutral-300 px-2 text-xs text-neutral-400"
-    >
-      Stories
-    </div>
+    <Chip label="Stories" />
     <div class="mt-8 max-w-4xl">
-      <h3 class="text-3xl leading-tighter sm:text-6xl">
+      <h3 class="text-3xl font-light leading-tighter sm:text-6xl">
         No secrets. Open intentions. Read how we work
       </h3>
       <p class="mt-4 text-base text-neutral-400 sm:text-lg">
@@ -227,15 +208,11 @@ import TextCard from '../components/TextCard.astro';
     <ImageCards client:only="solid-js" />
   </section>
   <section
-    class="flex flex-col items-center justify-start px-2 py-20 text-center sm:px-5"
+    class="mt-28 flex flex-col items-center justify-start px-2 text-center sm:mt-48 sm:px-5"
   >
-    <div
-      class="flex h-6 items-center justify-center rounded-2xl bg-neutral-300 px-2 text-xs text-neutral-400"
-    >
-      Get started
-    </div>
+    <Chip label="Get started" />
     <div class="mt-8 max-w-4xl px-5 sm:px-0">
-      <h3 class="text-3xl leading-tighter sm:text-6xl">
+      <h3 class="text-3xl font-light leading-tighter sm:text-6xl">
         Let’s build the next success story together
       </h3>
     </div>
