@@ -27,7 +27,7 @@ export default function Cards() {
     <Switch>
       <Match when={isMobile()}>
         <div
-          class="relative mt-8 flex h-[390px] w-full flex-col items-center justify-center gap-3 rounded-[70px] bg-[#F8F8F8] p-5"
+          class="relative mt-8 flex h-[390px] w-full flex-col items-center justify-center gap-3 rounded-[70px] bg-[#F8F8F8] p-5 leading-tight"
           onClick={() =>
             setActiveIndex(
               (prevIndex) => (prevIndex + 1) % cardsWithImages.length
@@ -75,11 +75,15 @@ export default function Cards() {
                     alt=""
                     class="absolute left-0 top-0 h-full w-full rounded-[70px] object-cover"
                   />
-                  <p class="relative z-10 text-lg text-white">{card.text}</p>
+                  <p class="relative z-10 text-lg leading-tight text-white">
+                    {card.text}
+                  </p>
                 </div>
               ) : (
                 <div class="relative flex h-[120px] flex-col items-center justify-center gap-3 rounded-[70px] bg-[#F8F8F8] p-5 lg:h-[260px]">
-                  <p class="text-lg text-neutral-900">{card.text}</p>
+                  <p class="text-lg leading-tight text-neutral-900">
+                    {card.text}
+                  </p>
                 </div>
               )
             }

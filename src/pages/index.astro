@@ -17,11 +17,12 @@ import Chip from '../components/Chip.astro';
       class="fixed top-0 z-10 flex h-20 w-full flex-row items-center justify-between bg-white px-5"
     >
       <p class="text-xl sm:text-3xl">CLAN</p>
-      <button
-        class="h-8 rounded-[50px] bg-neutral-200 px-2.5 text-sm text-neutral-900 sm:h-11 sm:px-4"
+      <a
+        class="flex h-8 items-center justify-center rounded-[50px] bg-neutral-200 px-2.5 text-sm text-neutral-900 sm:h-11 sm:px-4"
+        href="mailto:	clanplatform@pm.me"
       >
         Contact Us
-      </button>
+      </a>
     </header>
     <section
       class="relative flex flex-col items-center justify-center px-5 pb-24 pt-60 text-center sm:pt-40"
@@ -99,7 +100,7 @@ import Chip from '../components/Chip.astro';
       class="mt-28 flex flex-col items-center justify-start px-7 text-center sm:mt-48 sm:px-5"
     >
       <Chip label="Approach" />
-      <div class="mt-8 max-w-4xl">
+      <div class="mb-4 mt-5 max-w-4xl sm:mb-8">
         <h3 class="text-3xl font-light leading-tighter sm:text-6xl">
           Finally, a companion that cares about your success
         </h3>
@@ -133,7 +134,7 @@ import Chip from '../components/Chip.astro';
       class="mt-28 flex flex-col items-center justify-start px-2 text-center sm:mt-48 sm:px-5"
     >
       <Chip label="Services" />
-      <div class="mt-8 max-w-4xl px-5 sm:px-0">
+      <div class="mb-4 mt-5 max-w-4xl px-5 sm:mb-8 sm:px-0">
         <h3 class="text-3xl font-light leading-tighter sm:text-6xl">
           Focus on production, we’ll handle the rest
         </h3>
@@ -149,7 +150,7 @@ import Chip from '../components/Chip.astro';
       class="mt-28 flex flex-col items-center justify-start px-3 text-center sm:mt-48 sm:px-5"
     >
       <Chip label="Workflow" />
-      <div class="mt-8 max-w-4xl px-4 sm:px-0">
+      <div class="mb-4 mt-5 max-w-4xl px-4 sm:mb-8 sm:px-0">
         <h3 class="text-3xl font-light leading-tighter sm:text-6xl">
           Nine months to transform passion into profitable business
         </h3>
@@ -164,7 +165,7 @@ import Chip from '../components/Chip.astro';
       class="mt-28 flex flex-col items-center justify-start px-7 text-center sm:mt-48 sm:px-5"
     >
       <Chip label="Join us" />
-      <div class="mt-8 max-w-4xl">
+      <div class="mb-4 mt-5 max-w-4xl sm:mb-8">
         <h3 class="text-3xl font-light leading-tighter sm:text-6xl">
           We partner with early-stage brands with market advantages
         </h3>
@@ -176,17 +177,17 @@ import Chip from '../components/Chip.astro';
       </div>
       <div class="mt-16 grid max-w-6xl gap-4 sm:grid-cols-3 sm:gap-1">
         <TextCard
-          title="Dedicated team"
-          text="Outstanding professionals with multi-faceted experience including design, product, operations and technology are now onboard of your brand"
+          title="Design"
+          text="We believe that beauty sells and good design is essential. We are looking for individuals with design or visionary talent who can set trends."
         />
         <TextCard
-          title="Investment"
-          text="In the first year we invest US$240k worth of engineering, design, financials and art-direction resources, supporting marketing at the outset."
+          title="Price"
+          text="A solid financial model is vital. If you've figured out how to reduce production and material costs, we'll be happy to assist with everything else."
         />
         <TextCard
-          title="Explosive growth"
+          title="Market"
           enableBorder={false}
-          text="We work on an equity and success fee basis without touching your cash reserves."
+          text="We support innovators. If you are working on a product or market that doesn't yet exist and you believe it's a good fit, let's discuss it."
         />
       </div>
     </section>
@@ -195,7 +196,7 @@ import Chip from '../components/Chip.astro';
     class="mt-28 flex flex-col items-center justify-start px-2.5 text-center sm:mt-48 sm:px-5"
   >
     <Chip label="Stories" />
-    <div class="mt-8 max-w-4xl">
+    <div class="mb-4 mt-5 max-w-4xl sm:mb-8">
       <h3 class="text-3xl font-light leading-tighter sm:text-6xl">
         No secrets. Open intentions. Read how we work
       </h3>
@@ -211,7 +212,7 @@ import Chip from '../components/Chip.astro';
     class="mt-28 flex flex-col items-center justify-start px-2 text-center sm:mt-48 sm:px-5"
   >
     <Chip label="Get started" />
-    <div class="mt-8 max-w-4xl px-5 sm:px-0">
+    <div class="mt-8 max-w-2xl px-5 sm:px-0">
       <h3 class="text-3xl font-light leading-tighter sm:text-6xl">
         Let’s build the next success story together
       </h3>

@@ -18,7 +18,7 @@ export default function ImageCards() {
     },
     {
       title: 'Vereja',
-      text: 'Shooting and art-direction',
+      text: 'How a simple rearrangement of assortment can increase sales, and why high-fashion is flawed',
       available: false,
       imgPath: '/vereja.png',
       link: '/vereja',
@@ -48,10 +48,10 @@ export default function ImageCards() {
             setActiveIndex((prevIndex) => (prevIndex + 1) % cards.length)
           }
         >
-          <p class="z-10 text-center text-base text-white">
+          <p class="z-10 text-center text-[17px] text-white">
             {cards[activeIndex()].title}
           </p>
-          <p class="z-10 text-center text-sm text-[#9C9C9C]">
+          <p class="z-10 text-center text-[15px] text-[#9C9C9C]">
             {cards[activeIndex()].text}
           </p>
           <img
@@ -74,24 +74,28 @@ export default function ImageCards() {
       </Match>
 
       <Match when={!isMobile()}>
-        <div class="mt-8 grid w-full grid-cols-2 gap-4 lg:grid-cols-5">
+        <div class="mt-8 grid w-full min-w-[1400px] grid-cols-2 gap-4 lg:grid-cols-4">
           <For each={cards}>
-            {(card, index) =>
-              card.imgPath ? (
-                <div class="relative flex h-[120px] flex-col items-center justify-center gap-3 rounded-[70px] bg-[#F8F8F8] p-5 lg:h-[260px]">
-                  <img
-                    src={card.imgPath}
-                    alt=""
-                    class="absolute left-0 top-0 h-full w-full rounded-[70px] object-cover"
-                  />
-                  <p class="relative z-10 text-lg text-white">{card.text}</p>
+            {(card, index) => (
+              <div class="relative flex h-[600px] flex-col items-center justify-between gap-3 rounded-[220px] p-5">
+                <img
+                  src={card.imgPath}
+                  alt=""
+                  class="absolute left-0 top-0 h-full w-full rounded-[220px] object-cover"
+                />
+                <div class="z-10 flex h-5 flex-row items-center justify-center rounded-[48px] bg-[#F6F6F6] px-1.5 text-[10px] text-black">
+                  {card.available ? 'Read now' : 'Soon'}
                 </div>
-              ) : (
-                <div class="relative flex h-[120px] flex-col items-center justify-center gap-3 rounded-[70px] bg-[#F8F8F8] p-5 lg:h-[260px]">
-                  <p class="text-lg text-neutral-900">{card.text}</p>
+                <div class="mb-20">
+                  <p class="relative z-10 text-[19px] text-white">
+                    {card.title}
+                  </p>
+                  <p class="relative z-10 text-[15px] text-[#9C9C9C]">
+                    {card.text}
+                  </p>
                 </div>
-              )
-            }
+              </div>
+            )}
           </For>
         </div>
       </Match>
